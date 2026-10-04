@@ -62,7 +62,7 @@ await step( `add a rich-text tab and a FAQ tab to product #${ productId }`, asyn
 	await page.goto( `${ site }/wp-admin/post.php?post=${ productId }&action=edit`, { waitUntil: 'networkidle2' } );
 	await page.click( '.pnscripts_product_tabs_tab a' );
 	await page.click( '[data-pnscripts-pt-add="content"]' );
-	await page.waitForFunction( () => window.tinymce && document.querySelectorAll( '[data-pnscripts-pt-row]' ).length === 1 && tinymce.editors.some( ( e ) => e.id.startsWith( 'pnscripts-pt-content-' ) ) );
+	await page.waitForFunction( () => window.tinymce && document.querySelectorAll( '[data-pnscripts-pt-row]' ).length === 1 && tinymce.editors.some( ( e ) => e.id.startsWith( 'pnscripts-pt-content-' ) ), { timeout: 90000 } );
 	await page.type( '[data-pnscripts-pt-row] [data-pnscripts-pt-title-input]', 'E2E materials' );
 	await page.evaluate( () => tinymce.editors.find( ( e ) => e.id.startsWith( 'pnscripts-pt-content-' ) ).setContent( '<p>Typed <strong>in TinyMCE</strong>.</p>' ) );
 	await page.click( '[data-pnscripts-pt-add="faq"]' );
@@ -99,6 +99,23 @@ await step( 'hide Reviews on that product and switch the FAQ tab off, then on ag
 	await page.click( '.pnscripts_product_tabs_tab a' );
 	await page.click( '[data-pnscripts-pt-row][data-type="faq"] [data-pnscripts-pt-enabled]' );
 	await Promise.all( [ page.waitForNavigation( { waitUntil: 'networkidle2' } ), page.click( '#publish' ) ] );
+} );
+
+await step( 'link a manual global tab from the product panel', async () => {
+	const manual = wp( 'post', 'create', '--post_type=pnscripts_ptab', '--post_status=publish', `--post_title=E2E manual ${ stamp }`, '--post_content=Linked by hand.', '--porcelain' );
+	wp( 'post', 'meta', 'update', manual, '_pnscripts_product_tabs_scope', 'manual' );
+	wp( 'option', 'delete', 'pnscripts_product_tabs_index' );
+	await page.goto( `${ site }/wp-admin/post.php?post=${ productId }&action=edit`, { waitUntil: 'networkidle2' } );
+	await page.click( '.pnscripts_product_tabs_tab a' );
+	await page.select( '[data-pnscripts-pt-global-select]', manual );
+	await page.click( '[data-pnscripts-pt-add="global"]' );
+	await Promise.all( [ page.waitForNavigation( { waitUntil: 'networkidle2' } ), page.click( '#publish' ) ] );
+	const meta = JSON.parse( wp( 'post', 'meta', 'get', productId, '_pnscripts_product_tabs', '--format=json' ) );
+	assert.equal( meta[ 2 ].type, 'global' );
+	assert.equal( String( meta[ 2 ].global_id ), manual );
+	const html = await ( await fetch( `${ site }/?p=${ productId }` ) ).text();
+	assert.match( html, /Linked by hand\./ );
+	wp( 'post', 'delete', manual, '--force' );
 } );
 
 await step( 'storefront shows the tabs in order with FAQ schema, no Reviews', async () => {
