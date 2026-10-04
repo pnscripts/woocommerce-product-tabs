@@ -1,0 +1,109 @@
+{
+    "_source": "Written by YIKES Custom Product Tabs 1.8.6 through its own admin UI and AJAX handlers on WordPress 7.1.2 + WooCommerce 11.1.2 (2026-10-04).",
+    "saved": {
+        "1": {
+            "tab_title": "Shipping & Returns",
+            "tab_name": "Shipping (store-wide)",
+            "tab_content": "<p>Free shipping over <strong>€50</strong>. Returns accepted within 30 days.</p><ul><li>EU: 2–4 days</li><li>Rest of world: 5–10 days</li></ul>",
+            "tab_id": 1,
+            "taxonomies": [],
+            "tab_slug": "shipping-returns",
+            "global_tab": false
+        },
+        "2": {
+            "tab_title": "Size guide",
+            "tab_name": "",
+            "tab_content": "<table><tbody><tr><th>EU</th><th>US</th></tr><tr><td>42</td><td>8.5</td></tr></tbody></table><p>Measure your foot in the evening.</p>",
+            "tab_id": 2,
+            "taxonomies": [],
+            "tab_slug": "size-guide",
+            "global_tab": false
+        }
+    },
+    "applied": {
+        "10": {
+            "1": {
+                "post_id": "10",
+                "reusable_tab_id": "1",
+                "tab_id": "shipping-returns"
+            }
+        },
+        "12": {
+            "1": {
+                "post_id": "12",
+                "reusable_tab_id": "1",
+                "tab_id": "shipping-returns"
+            }
+        },
+        "13": {
+            "1": {
+                "post_id": "13",
+                "reusable_tab_id": "1",
+                "tab_id": "shipping-returns"
+            }
+        }
+    },
+    "products": {
+        "10": [
+            {
+                "title": "Shipping & Returns",
+                "id": "shipping-returns",
+                "content": "<p>Free shipping over <strong>€50</strong>. Returns accepted within 30 days.</p><ul><li>EU: 2–4 days</li><li>Rest of world: 5–10 days</li></ul>"
+            },
+            {
+                "title": "Materials",
+                "id": "materials",
+                "content": "<p>Upper: recycled mesh. Sole: Vibram® rubber.</p>"
+            },
+            {
+                "title": "Care",
+                "id": "care",
+                "content": "<p>Old care text (shadowed by the next tab).</p>"
+            },
+            {
+                "title": "Care",
+                "id": "care",
+                "content": "<p>Hand wash cold. Air dry.</p>"
+            },
+            {
+                "title": "Size guide",
+                "id": "size-guide",
+                "content": "<table><tbody><tr><th>EU</th><th>US</th></tr><tr><td>42</td><td>8.5</td></tr></tbody></table><p>Measure your foot in the evening.</p>"
+            }
+        ],
+        "12": [
+            {
+                "title": "Shipping & Returns",
+                "id": "shipping-returns",
+                "content": "<p>Free shipping over <strong>€50</strong>. Returns accepted within 30 days.</p><ul><li>EU: 2–4 days</li><li>Rest of world: 5–10 days</li></ul>"
+            },
+            {
+                "title": "Технически данни",
+                "id": "технически-данни",
+                "content": "<p>Тегло: 80 г.</p>"
+            }
+        ],
+        "13": [
+            {
+                "title": "Description",
+                "id": "description",
+                "content": "<p>YIKES tab that replaced the WooCommerce description.</p>\r\n\r\nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            },
+            {
+                "title": "",
+                "id": "",
+                "content": "<p>Draft without a title (never shown by YIKES).</p>"
+            },
+            {
+                "title": "Shipping & Returns",
+                "id": "shipping-returns",
+                "content": "<p>Free shipping over <strong>€50</strong>. Returns accepted within 30 days.</p><ul><li>EU: 2–4 days</li><li>Rest of world: 5–10 days</li></ul>"
+            },
+            {
+                "title": "Warranty",
+                "id": "warranty",
+                "content": "[product_warranty]<p>2 years.</p><iframe src=\"https://example.test/embed\" width=\"300\" height=\"150\"></iframe>"
+            }
+        ]
+    }
+}

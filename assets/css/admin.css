@@ -1,0 +1,155 @@
+/* PN Product Tabs admin. */
+.pnscripts-pt .pnscripts-pt__section {
+	padding: 0 12px 12px;
+	border-bottom: 1px solid #eee;
+}
+
+.pnscripts-pt .pnscripts-pt__section:last-of-type {
+	border-bottom: 0;
+}
+
+.pnscripts-pt .pnscripts-pt__intro {
+	margin: 12px 0;
+	color: #50575e;
+}
+
+.pnscripts-pt .pnscripts-pt__list {
+	margin: 0;
+}
+
+.pnscripts-pt .pnscripts-pt__row {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 2px;
+	margin: 0 0 8px;
+}
+
+.pnscripts-pt .pnscripts-pt__row.is-disabled .pnscripts-pt__head {
+	opacity: 0.6;
+}
+
+.pnscripts-pt .pnscripts-pt__head {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 10px;
+}
+
+.pnscripts-pt .pnscripts-pt__handle {
+	cursor: move;
+	color: #8c8f94;
+}
+
+.pnscripts-pt .pnscripts-pt__toggle {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	background: none;
+	border: 0;
+	padding: 4px 0;
+	text-align: left;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.pnscripts-pt .pnscripts-pt__badge {
+	font-weight: 400;
+	font-size: 11px;
+	background: #f0f0f1;
+	border-radius: 10px;
+	padding: 1px 8px;
+	color: #50575e;
+}
+
+.pnscripts-pt .pnscripts-pt__badge--import {
+	background: #e7f5fe;
+	color: #135e96;
+}
+
+.pnscripts-pt .pnscripts-pt__enabled {
+	white-space: nowrap;
+}
+
+.pnscripts-pt .pnscripts-pt__body {
+	display: none;
+	padding: 0 12px 12px;
+	border-top: 1px solid #f0f0f1;
+}
+
+.pnscripts-pt .pnscripts-pt__row.is-open .pnscripts-pt__body {
+	display: block;
+}
+
+.pnscripts-pt .pnscripts-pt__body .form-field {
+	padding-left: 0 !important;
+}
+
+.pnscripts-pt .pnscripts-pt__body .form-field label {
+	float: none;
+	display: block;
+	margin: 0 0 4px;
+}
+
+.pnscripts-pt .pnscripts-pt__body .form-field input.short,
+.pnscripts-pt .pnscripts-pt__body .form-field textarea.short {
+	width: 100%;
+	float: none;
+}
+
+.pnscripts-pt .pnscripts-pt__faq-item {
+	border-left: 3px solid #dcdcde;
+	padding-left: 10px;
+	margin: 8px 0;
+}
+
+.pnscripts-pt .pnscripts-pt__placeholder {
+	border: 1px dashed #c3c4c7;
+	height: 40px;
+	margin: 0 0 8px;
+}
+
+.pnscripts-pt .pnscripts-pt__toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px;
+	padding-left: 0 !important;
+}
+
+.pnscripts-pt .pnscripts-pt__manage {
+	margin-left: auto;
+}
+
+.pnscripts-pt .pnscripts-pt__check {
+	padding-left: 0 !important;
+	margin: 4px 0;
+}
+
+.pnscripts-pt .pnscripts-pt__check label {
+	float: none;
+	margin: 0;
+	width: auto;
+}
+
+.pnscripts-pt-global__row {
+	margin: 0 0 16px;
+}
+
+.pnscripts-pt-global__row legend {
+	font-weight: 600;
+	margin-bottom: 6px;
+}
+
+.pnscripts-pt-defaults {
+	max-width: 900px;
+}
+
+.pnscripts-pt-import__report {
+	max-width: 700px;
+	margin-top: 12px;
+}
+
+.pnscripts-pt-import__report th {
+	font-weight: 400;
+}

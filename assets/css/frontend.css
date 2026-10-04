@@ -1,0 +1,30 @@
+/* PN Product Tabs: FAQ tab (native details/summary). Inherits the theme's fonts and colours. */
+.pnscripts-product-tabs-faq {
+	margin: 0 0 1.5em;
+}
+
+.pnscripts-product-tabs-faq__item {
+	border-bottom: 1px solid currentColor;
+	border-bottom-color: color-mix(in srgb, currentColor 18%, transparent);
+	padding: 0.25em 0;
+}
+
+.pnscripts-product-tabs-faq__question {
+	cursor: pointer;
+	font-weight: 600;
+	list-style-position: outside;
+	padding: 0.6em 0;
+}
+
+.pnscripts-product-tabs-faq__question:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 2px;
+}
+
+.pnscripts-product-tabs-faq__answer {
+	padding: 0 0 0.75em;
+}
+
+.pnscripts-product-tabs-faq__answer > :last-child {
+	margin-bottom: 0;
+}

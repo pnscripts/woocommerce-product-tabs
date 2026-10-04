@@ -1,0 +1,51 @@
+{
+    "name": "pnscripts/woocommerce-product-tabs",
+    "description": "WooCommerce plugin: custom and global product tabs, FAQ tabs, default tab manager and a one-click importer from YIKES Custom Product Tabs.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "PN Scripts",
+            "homepage": "https://pnscripts.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1"
+    },
+    "require-dev": {
+        "brain/monkey": "^2.6",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "php-stubs/woocommerce-stubs": "*",
+        "php-stubs/wp-cli-stubs": "*",
+        "phpcompatibility/phpcompatibility-wp": "*",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^10.5 || ^11.5",
+        "szepeviktor/phpstan-wordpress": "^2.0",
+        "wp-coding-standards/wpcs": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pnscripts\\ProductTabs\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pnscripts\\ProductTabs\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
+        "platform": {
+            "php": "8.2.0"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --testsuite Unit --colors=always",
+        "test:integration": "phpunit -c phpunit-integration.xml.dist --colors=always",
+        "lint": "phpcs",
+        "analyse": "phpstan analyse --memory-limit=1G"
+    }
+}
