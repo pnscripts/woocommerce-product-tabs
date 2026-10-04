@@ -53,12 +53,19 @@
 		table.classList.remove( 'hidden' );
 		var list = notes.querySelector( 'ul' );
 		list.textContent = '';
-		( report.warnings || [] ).forEach( function ( text ) {
+		var all = report.warnings || [];
+		all.slice( 0, 25 ).forEach( function ( text ) {
 			var li = document.createElement( 'li' );
 			li.textContent = text;
 			list.appendChild( li );
 		} );
-		notes.classList.toggle( 'hidden', ! report.warnings || ! report.warnings.length );
+		var total = Math.max( report.warnings_total || 0, all.length );
+		if ( total > 25 ) {
+			var more = document.createElement( 'li' );
+			more.textContent = cfg.moreNotes.replace( '%d', String( total - 25 ) );
+			list.appendChild( more );
+		}
+		notes.classList.toggle( 'hidden', ! all.length );
 	}
 
 	function setBusy( busy ) {

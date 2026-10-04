@@ -176,6 +176,17 @@ final class AdminTest extends IntegrationTestCase {
 		$this->assertArrayHasKey( $id, $this->plugin->globals->all(), 'Index rebuilt after save.' );
 	}
 
+	public function test_global_tabs_rest_api_is_for_editors_only(): void {
+		$id = $this->global_tab( 'Internal draft rules', 'Not for visitors', array( 'scope' => 'manual' ) );
+		do_action( 'rest_api_init' );
+		wp_set_current_user( 0 );
+		$this->assertSame( 401, rest_do_request( new \WP_REST_Request( 'GET', '/wp/v2/pnscripts-product-tabs' ) )->get_status() );
+		$this->assertSame( 401, rest_do_request( new \WP_REST_Request( 'GET', '/wp/v2/pnscripts-product-tabs/' . $id ) )->get_status() );
+		wp_set_current_user( 1 );
+		$response = rest_do_request( new \WP_REST_Request( 'GET', '/wp/v2/pnscripts-product-tabs/' . $id ) );
+		$this->assertSame( 200, $response->get_status() );
+	}
+
 	public function test_settings_page_registers_sanitiser_and_capability(): void {
 		$page = new SettingsPage( $this->plugin->settings, $this->plugin->importer );
 		$page->register();

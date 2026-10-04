@@ -64,7 +64,7 @@ final class GlobalTabs {
 		register_post_type(
 			self::POST_TYPE,
 			array(
-				'labels'              => array(
+				'labels'                => array(
 					'name'               => __( 'Global product tabs', 'pnscripts-product-tabs' ),
 					'singular_name'      => __( 'Global product tab', 'pnscripts-product-tabs' ),
 					'menu_name'          => __( 'Product tabs', 'pnscripts-product-tabs' ),
@@ -79,23 +79,24 @@ final class GlobalTabs {
 					'item_updated'       => __( 'Global tab updated.', 'pnscripts-product-tabs' ),
 					'item_published'     => __( 'Global tab published.', 'pnscripts-product-tabs' ),
 				),
-				'description'         => __( 'Reusable tabs shown on all products, on products in chosen categories or tags, or where added manually.', 'pnscripts-product-tabs' ),
-				'public'              => false,
-				'publicly_queryable'  => false,
-				'exclude_from_search' => true,
-				'show_ui'             => true,
-				'show_in_menu'        => 'edit.php?post_type=product',
-				'show_in_nav_menus'   => false,
-				'show_in_admin_bar'   => false,
-				'show_in_rest'        => true,
-				'rest_base'           => 'pnscripts-product-tabs',
-				'capability_type'     => 'product',
-				'map_meta_cap'        => true,
-				'hierarchical'        => false,
-				'has_archive'         => false,
-				'rewrite'             => false,
-				'query_var'           => false,
-				'supports'            => array( 'title', 'editor', 'revisions' ),
+				'description'           => __( 'Reusable tabs shown on all products, on products in chosen categories or tags, or where added manually.', 'pnscripts-product-tabs' ),
+				'public'                => false,
+				'publicly_queryable'    => false,
+				'exclude_from_search'   => true,
+				'show_ui'               => true,
+				'show_in_menu'          => 'edit.php?post_type=product',
+				'show_in_nav_menus'     => false,
+				'show_in_admin_bar'     => false,
+				'show_in_rest'          => true,
+				'rest_base'             => 'pnscripts-product-tabs',
+				'rest_controller_class' => GlobalTabsRestController::class,
+				'capability_type'       => 'product',
+				'map_meta_cap'          => true,
+				'hierarchical'          => false,
+				'has_archive'           => false,
+				'rewrite'               => false,
+				'query_var'             => false,
+				'supports'              => array( 'title', 'editor', 'revisions' ),
 			)
 		);
 	}
@@ -146,15 +147,14 @@ final class GlobalTabs {
 	public function rebuild(): array {
 		$posts = get_posts(
 			array(
-				'post_type'        => self::POST_TYPE,
-				'post_status'      => 'publish',
-				'numberposts'      => self::MAX,
-				'orderby'          => array(
+				'post_type'     => self::POST_TYPE,
+				'post_status'   => 'publish',
+				'numberposts'   => self::MAX,
+				'orderby'       => array(
 					'menu_order' => 'ASC',
 					'title'      => 'ASC',
 				),
-				'suppress_filters' => true,
-				'no_found_rows'    => true,
+				'no_found_rows' => true,
 			)
 		);
 		$rows  = array();

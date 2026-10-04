@@ -12,8 +12,26 @@
 .pnscripts-product-tabs-faq__question {
 	cursor: pointer;
 	font-weight: 600;
-	list-style-position: outside;
-	padding: 0.6em 0;
+	list-style: none;
+	padding: 0.6em 1.75em 0.6em 0;
+	position: relative;
+}
+
+.pnscripts-product-tabs-faq__question::-webkit-details-marker {
+	display: none;
+}
+
+.pnscripts-product-tabs-faq__question::after {
+	content: "+";
+	font-weight: 400;
+	position: absolute;
+	right: 0.25em;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.pnscripts-product-tabs-faq__item[open] > .pnscripts-product-tabs-faq__question::after {
+	content: "\2212";
 }
 
 .pnscripts-product-tabs-faq__question:focus-visible {

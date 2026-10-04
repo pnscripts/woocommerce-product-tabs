@@ -21,11 +21,10 @@ function pnscripts_product_tabs_uninstall_site(): void {
 
 	$post_ids = get_posts(
 		array(
-			'post_type'        => 'pnscripts_ptab',
-			'post_status'      => 'any,trash,auto-draft',
-			'numberposts'      => -1,
-			'fields'           => 'ids',
-			'suppress_filters' => true,
+			'post_type'   => 'pnscripts_ptab',
+			'post_status' => 'any,trash,auto-draft',
+			'numberposts' => -1,
+			'fields'      => 'ids',
 		)
 	);
 	foreach ( $post_ids as $post_id ) {

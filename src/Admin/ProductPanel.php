@@ -165,7 +165,7 @@ final class ProductPanel {
 								<input type="checkbox" name="<?php echo esc_attr( self::FIELD ); ?>[hidden_globals][]" value="<?php echo esc_attr( (string) $global['id'] ); ?>" <?php checked( in_array( $global['id'], $hidden_g, true ) ); ?> />
 								<?php
 								printf(
-									/* translators: %s: global tab title */
+									/* translators: %s: tab title */
 									esc_html__( 'Hide "%s" on this product', 'pnscripts-product-tabs' ),
 									esc_html( $global['title'] )
 								);
@@ -186,7 +186,7 @@ final class ProductPanel {
 							<input type="checkbox" name="<?php echo esc_attr( self::FIELD ); ?>[hidden_defaults][]" value="<?php echo esc_attr( $key ); ?>" <?php checked( in_array( $key, $hidden_d, true ) ); ?> />
 							<?php
 							printf(
-								/* translators: %s: default tab name, e.g. Reviews */
+								/* translators: %s: tab title */
 								esc_html__( 'Hide "%s" on this product', 'pnscripts-product-tabs' ),
 								esc_html( $label )
 							);

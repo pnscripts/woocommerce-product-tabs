@@ -14,6 +14,13 @@ use Pnscripts\ProductTabs\Frontend\BlockCompat;
 
 final class BlockThemeTest extends IntegrationTestCase {
 
+	protected function setUp(): void {
+		parent::setUp();
+		if ( ! \WP_Block_Type_Registry::get_instance()->is_registered( 'core/accordion' ) || version_compare( (string) WC_VERSION, '10.0', '<' ) ) {
+			$this->markTestSkipped( 'The accordion Product Details block needs WordPress 6.9+ (core/accordion) and WooCommerce 10+; older versions use the tabbed block, covered by StorefrontTest.' );
+		}
+	}
+
 	/**
 	 * Render the accordion fixture for a product and return the item titles in order.
 	 *

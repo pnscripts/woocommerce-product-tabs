@@ -141,6 +141,8 @@ final class SettingsPage {
 				'doneDry'       => __( 'Dry run finished: nothing was changed. These numbers are what an import will do.', 'pnscripts-product-tabs' ),
 				'doneImport'    => __( 'Import finished. Check a few product pages, then deactivate YIKES Custom Product Tabs.', 'pnscripts-product-tabs' ),
 				'doneUndo'      => __( 'Import removed.', 'pnscripts-product-tabs' ),
+				/* translators: %d: number of further notes */
+				'moreNotes'     => __( '… and %d more notes like these.', 'pnscripts-product-tabs' ),
 				'labels'        => self::report_labels(),
 			)
 		);

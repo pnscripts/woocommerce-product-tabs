@@ -81,7 +81,7 @@ final class Command {
 		}
 		$rows = array();
 		foreach ( $report as $key => $value ) {
-			if ( 'warnings' !== $key ) {
+			if ( 'warnings' !== $key && 'warnings_total' !== $key ) {
 				$rows[] = array(
 					'counter' => $key,
 					'value'   => $value,
@@ -93,8 +93,8 @@ final class Command {
 		foreach ( $shown as $warning ) {
 			\WP_CLI::warning( $warning );
 		}
-		if ( count( $report['warnings'] ) > count( $shown ) ) {
-			\WP_CLI::log( sprintf( '… %d more notes (use --format=json for all).', count( $report['warnings'] ) - count( $shown ) ) );
+		if ( $report['warnings_total'] > count( $shown ) ) {
+			\WP_CLI::log( sprintf( '… %d more notes (--format=json lists the first 200).', $report['warnings_total'] - count( $shown ) ) );
 		}
 		\WP_CLI::success( YikesImporter::MODE_DRY === $mode ? 'Dry run finished; nothing was changed.' : 'Done.' );
 	}

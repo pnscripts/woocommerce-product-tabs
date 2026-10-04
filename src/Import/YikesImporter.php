@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) || exit;
  * - a product whose YIKES data changed gets its imported tabs replaced; tabs added in this plugin stay.
  *
  * @phpstan-import-type SavedTab from YikesMapper
- * @phpstan-type Report array{saved_found: int, saved_created: int, saved_existing: int, products_total: int, products_seen: int, products_imported: int, products_unchanged: int, tabs_custom: int, tabs_linked: int, tabs_disabled_empty: int, tabs_disabled_duplicate: int, replaced_defaults: int, removed_globals: int, removed_products: int, warnings: list<string>}
+ * @phpstan-type Report array{saved_found: int, saved_created: int, saved_existing: int, products_total: int, products_seen: int, products_imported: int, products_unchanged: int, tabs_custom: int, tabs_linked: int, tabs_disabled_empty: int, tabs_disabled_duplicate: int, replaced_defaults: int, removed_globals: int, removed_products: int, warnings_total: int, warnings: list<string>}
  * @phpstan-type Batch array{mode: string, cursor: int, done: bool, report: Report}
  */
 final class YikesImporter {
@@ -134,7 +134,8 @@ final class YikesImporter {
 		if ( $done && $write ) {
 			update_option( self::LAST_RUN, time(), false );
 		}
-		$report['warnings'] = array_slice( $report['warnings'], 0, 200 );
+		$report['warnings_total'] = count( $report['warnings'] );
+		$report['warnings']       = array_slice( $report['warnings'], 0, 200 );
 
 		return array(
 			'mode'   => $mode,
@@ -192,6 +193,7 @@ final class YikesImporter {
 			'replaced_defaults'       => $total['replaced_defaults'] + $add['replaced_defaults'],
 			'removed_globals'         => $total['removed_globals'] + $add['removed_globals'],
 			'removed_products'        => $total['removed_products'] + $add['removed_products'],
+			'warnings_total'          => $total['warnings_total'] + $add['warnings_total'],
 			'warnings'                => array_slice( array_merge( $total['warnings'], $add['warnings'] ), 0, 200 ),
 		);
 	}
@@ -217,6 +219,7 @@ final class YikesImporter {
 			'replaced_defaults'       => 0,
 			'removed_globals'         => 0,
 			'removed_products'        => 0,
+			'warnings_total'          => 0,
 			'warnings'                => array(),
 		);
 	}
@@ -290,22 +293,20 @@ final class YikesImporter {
 	private function existing_globals(): array {
 		$posts   = get_posts(
 			array(
-				'post_type'        => GlobalTabs::POST_TYPE,
-				'post_status'      => 'any',
-				'numberposts'      => -1,
-				'fields'           => 'ids',
-				'meta_key'         => GlobalTabs::META_YIKES, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key -- Few posts.
-				'suppress_filters' => true,
+				'post_type'   => GlobalTabs::POST_TYPE,
+				'post_status' => 'any',
+				'numberposts' => -1,
+				'fields'      => 'ids',
+				'meta_key'    => GlobalTabs::META_YIKES, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key -- Few posts.
 			)
 		);
 		$trashed = get_posts(
 			array(
-				'post_type'        => GlobalTabs::POST_TYPE,
-				'post_status'      => 'trash',
-				'numberposts'      => -1,
-				'fields'           => 'ids',
-				'meta_key'         => GlobalTabs::META_YIKES, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key -- Few posts.
-				'suppress_filters' => true,
+				'post_type'   => GlobalTabs::POST_TYPE,
+				'post_status' => 'trash',
+				'numberposts' => -1,
+				'fields'      => 'ids',
+				'meta_key'    => GlobalTabs::META_YIKES, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key -- Few posts.
 			)
 		);
 		$map     = array();
