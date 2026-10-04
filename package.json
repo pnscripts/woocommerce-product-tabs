@@ -1,0 +1,12 @@
+{
+  "name": "pnscripts-product-tabs",
+  "private": true,
+  "description": "Dev tooling for PN Product Tabs for WooCommerce (screenshots, i18n helpers). Not shipped.",
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "screenshots": "node bin/screenshots.mjs"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^24.0.0"
+  }
+}
