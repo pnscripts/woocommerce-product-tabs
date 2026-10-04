@@ -11,3 +11,4 @@
 /phpunit.xml.dist export-ignore
 /phpunit-integration.xml.dist export-ignore
 /assets/screenshots export-ignore
+/docs export-ignore

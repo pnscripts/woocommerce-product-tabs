@@ -332,8 +332,14 @@ final class TabRenderer {
 		if ( false === $json ) {
 			return;
 		}
-		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- JSON encoded with JSON_HEX_TAG, cannot close the script element.
-		echo "<script type=\"application/ld+json\" class=\"pnscripts-product-tabs-schema\">{$json}</script>\n";
+		// JSON encoded with JSON_HEX_TAG, so it cannot close the script element.
+		wp_print_inline_script_tag(
+			$json,
+			array(
+				'type'  => 'application/ld+json',
+				'class' => 'pnscripts-product-tabs-schema',
+			)
+		);
 	}
 
 	/**

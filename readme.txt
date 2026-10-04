@@ -4,7 +4,7 @@ Tags: product tabs, woocommerce tabs, custom tabs, faq, tab manager
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -117,10 +117,17 @@ Not yet. The free plugin is complete and will stay complete; a later add-on may 
 
 == Changelog ==
 
+= 1.0.1 =
+* Bundled translations load only when no language pack from translate.wordpress.org is installed (Plugin Check: no load_plugin_textdomain()).
+* FAQPage JSON-LD is printed with wp_print_inline_script_tag().
+
 = 1.0.0 =
 * First release: per-product and global tabs, FAQ tabs with FAQPage schema, default tab manager, classic and block theme support, YIKES Custom Product Tabs importer (dry run, batches, re-runnable, undo), WP-CLI commands, Bulgarian, German and Polish translations.
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Plugin Check and WordPress.org review fixes, no functional change.
 
 = 1.0.0 =
 First release.

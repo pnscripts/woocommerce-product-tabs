@@ -154,10 +154,19 @@ final class Plugin {
 	}
 
 	/**
-	 * Bundled translations (translate.wordpress.org packs take precedence once available).
+	 * Bundled translations (bg_BG, de_DE, pl_PL) are used only when no language pack from
+	 * translate.wordpress.org is installed, so community translations always win.
 	 */
 	public function load_textdomain(): void {
-		load_plugin_textdomain( 'pnscripts-product-tabs', false, dirname( plugin_basename( PNSCRIPTS_PRODUCT_TABS_FILE ) ) . '/languages' );
+		$locale   = determine_locale();
+		$official = WP_LANG_DIR . '/plugins/pnscripts-product-tabs-' . $locale;
+		if ( is_readable( $official . '.mo' ) || is_readable( $official . '.l10n.php' ) ) {
+			return;
+		}
+		$bundled = PNSCRIPTS_PRODUCT_TABS_DIR . 'languages/pnscripts-product-tabs-' . $locale . '.mo';
+		if ( is_readable( $bundled ) ) {
+			load_textdomain( 'pnscripts-product-tabs', $bundled, $locale );
+		}
 	}
 
 	/**
