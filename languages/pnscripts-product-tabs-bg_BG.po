@@ -23,8 +23,8 @@ msgstr "PN Product Tabs for WooCommerce"
 
 #. Plugin URI of the plugin
 #: pnscripts-product-tabs.php
-msgid "https://pnscripts.com/marketplace/pnscripts-product-tabs"
-msgstr "https://pnscripts.com/marketplace/pnscripts-product-tabs"
+msgid "https://pnscripts.com/marketplace/pn-product-tabs"
+msgstr "https://pnscripts.com/marketplace/pn-product-tabs"
 
 #. Description of the plugin
 #: pnscripts-product-tabs.php

@@ -21,7 +21,7 @@ msgstr ""
 
 #. Plugin URI of the plugin
 #: pnscripts-product-tabs.php
-msgid "https://pnscripts.com/marketplace/pnscripts-product-tabs"
+msgid "https://pnscripts.com/marketplace/pn-product-tabs"
 msgstr ""
 
 #. Description of the plugin

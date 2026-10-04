@@ -162,7 +162,7 @@ T = {
     "Global tab updated.": ("Глобалният раздел е обновен.", "Globaler Tab aktualisiert.", "Globalna zakładka zaktualizowana."),
     "Global tab published.": ("Глобалният раздел е публикуван.", "Globaler Tab veröffentlicht.", "Globalna zakładka opublikowana."),
     "Reusable tabs shown on all products, on products in chosen categories or tags, or where added manually.": ("Раздели за многократна употреба, показвани на всички продукти, на продукти в избрани категории или етикети, или там, където са добавени ръчно.", "Wiederverwendbare Tabs für alle Produkte, für Produkte in gewählten Kategorien oder Schlagwörtern oder dort, wo sie manuell hinzugefügt wurden.", "Zakładki wielokrotnego użytku wyświetlane na wszystkich produktach, w wybranych kategoriach lub tagach albo tam, gdzie dodano je ręcznie."),
-    "https://pnscripts.com/marketplace/pnscripts-product-tabs": ("https://pnscripts.com/marketplace/pnscripts-product-tabs",) * 3,
+    "https://pnscripts.com/marketplace/pn-product-tabs": ("https://pnscripts.com/marketplace/pn-product-tabs",) * 3,
     "https://pnscripts.com": ("https://pnscripts.com",) * 3,
 }
 

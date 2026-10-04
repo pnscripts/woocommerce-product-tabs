@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:          PN Product Tabs for WooCommerce
- * Plugin URI:           https://pnscripts.com/marketplace/pnscripts-product-tabs
+ * Plugin URI:           https://pnscripts.com/marketplace/pn-product-tabs
  * Description:          Custom product tabs per product, reusable global tabs by category or tag, FAQ tabs with optional FAQPage schema, rename, reorder or hide the default tabs, and a one-click importer from YIKES Custom Product Tabs. Works in classic and block themes.
  * Version:              1.0.0
  * Requires at least:    6.5
