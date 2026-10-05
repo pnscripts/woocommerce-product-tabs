@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: PN Product Tabs for WooCommerce 1.0.0\n"
+"Project-Id-Version: PN Product Tabs 1.0.1\n"
 "Report-Msgid-Bugs-To: https://github.com/pnscripts/woocommerce-product-tabs/issues\n"
 "Last-Translator: PN Scripts <https://pnscripts.com>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-04T14:51:47+00:00\n"
+"POT-Creation-Date: 2026-10-05T12:35:24+00:00\n"
 "PO-Revision-Date: 2026-10-04 00:00+0000\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: pnscripts-product-tabs\n"
@@ -18,8 +18,8 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: pnscripts-product-tabs.php
-msgid "PN Product Tabs for WooCommerce"
-msgstr "PN Product Tabs for WooCommerce"
+msgid "PN Product Tabs – Custom Tabs & FAQ"
+msgstr "PN Product Tabs – Custom Tabs & FAQ"
 
 #. Plugin URI of the plugin
 #: pnscripts-product-tabs.php
@@ -541,7 +541,7 @@ msgid "Product #%1$d: the tab \"%2$s\" was hidden by a later tab with the same t
 msgstr "Produkt #%1$d: Der Tab „%2$s“ wurde in YIKES durch einen späteren Tab mit gleichem Titel verdeckt; er wurde deaktiviert importiert."
 
 #. translators: %s: minimum WooCommerce version
-#: src/Plugin.php:190
+#: src/Plugin.php:199
 #, php-format
 msgid "PN Product Tabs needs WooCommerce %s or newer to be active."
 msgstr "PN Product Tabs benötigt ein aktives WooCommerce %s oder neuer."

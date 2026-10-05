@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <ruleset name="PN Product Tabs">
-	<description>WordPress Coding Standards 3 for PN Product Tabs for WooCommerce.</description>
+	<description>WordPress Coding Standards 3 for PN Product Tabs.</description>
 
 	<file>pnscripts-product-tabs.php</file>
 	<file>uninstall.php</file>

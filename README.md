@@ -1,4 +1,4 @@
-# PN Product Tabs for WooCommerce
+# PN Product Tabs – Custom Tabs & FAQ
 
 Custom product tabs for WooCommerce: per-product tabs, reusable global tabs by category or tag, FAQ tabs with
 optional FAQPage schema, a manager for the default Description / Additional information / Reviews tabs, and a

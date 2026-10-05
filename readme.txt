@@ -1,4 +1,4 @@
-=== PN Product Tabs for WooCommerce ===
+=== PN Product Tabs – Custom Tabs & FAQ ===
 Contributors: pnscripts
 Tags: product tabs, woocommerce tabs, custom tabs, faq, tab manager
 Requires at least: 6.5

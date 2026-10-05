@@ -6,7 +6,7 @@ WP_CLI="$ROOT/.cache/wp-cli.phar"
 [ -f "$WP_CLI" ] || curl -fsSL -o "$WP_CLI" https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 "$ROOT/bin/build-zip.sh" > /dev/null
 php -d memory_limit=1G "$WP_CLI" i18n make-pot "$ROOT/build/pnscripts-product-tabs" "$ROOT/languages/pnscripts-product-tabs.pot" \
-	--domain=pnscripts-product-tabs --slug=pnscripts-product-tabs --package-name="PN Product Tabs for WooCommerce" \
+	--domain=pnscripts-product-tabs --slug=pnscripts-product-tabs --package-name="PN Product Tabs" \
 	--headers='{"Report-Msgid-Bugs-To":"https://github.com/pnscripts/woocommerce-product-tabs/issues"}' --exclude=vendor,tests
 python3 "$ROOT/bin/i18n/translations.py" "$ROOT"
 php -d memory_limit=1G "$WP_CLI" i18n make-mo "$ROOT/languages"

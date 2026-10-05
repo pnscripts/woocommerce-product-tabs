@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bundled translations (bg_BG, de_DE, pl_PL) for PN Product Tabs for WooCommerce.
+"""Bundled translations (bg_BG, de_DE, pl_PL) for PN Product Tabs.
 
 Regenerates languages/pnscripts-product-tabs-<locale>.po from the .pot; untranslated strings stay empty
 (WordPress falls back to English). Run bin/i18n/update.sh, which also builds the .mo files.
@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 T = {
-    "PN Product Tabs for WooCommerce": ("PN Product Tabs for WooCommerce", "PN Product Tabs for WooCommerce", "PN Product Tabs for WooCommerce"),
+    "PN Product Tabs – Custom Tabs & FAQ": ("PN Product Tabs – Custom Tabs & FAQ", "PN Product Tabs – Custom Tabs & FAQ", "PN Product Tabs – Custom Tabs & FAQ"),
     "Custom product tabs per product, reusable global tabs by category or tag, FAQ tabs with optional FAQPage schema, rename, reorder or hide the default tabs, and a one-click importer from YIKES Custom Product Tabs. Works in classic and block themes.": (
         "Собствени раздели за всеки продукт, глобални раздели за категории или етикети, раздели с ЧЗВ и FAQPage schema, преименуване, подреждане и скриване на стандартните раздели и импорт с едно кликване от YIKES Custom Product Tabs. Работи с класически и блокови теми.",
         "Eigene Produkt-Tabs pro Produkt, wiederverwendbare globale Tabs nach Kategorie oder Schlagwort, FAQ-Tabs mit optionalem FAQPage-Schema, Umbenennen, Sortieren oder Ausblenden der Standard-Tabs und ein Ein-Klick-Import aus YIKES Custom Product Tabs. Funktioniert mit klassischen und Block-Themes.",
