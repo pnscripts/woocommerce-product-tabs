@@ -15,7 +15,7 @@ use Pnscripts\ProductTabs\Plugin;
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Manage PN Product Tabs.
+ * Manage PN Scripts Product Tabs.
  */
 final class Command {
 

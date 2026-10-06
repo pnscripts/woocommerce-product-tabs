@@ -1,14 +1,20 @@
 # Changelog
 
-All notable changes to PN Product Tabs. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow [SemVer](https://semver.org/).
+All notable changes to PN Scripts Product Tabs. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow [SemVer](https://semver.org/).
 
 ## [Unreleased]
 
 Before the first WordPress.org submission (owner):
 
 - WordPress.org account with 2FA; set the real username in `readme.txt` → `Contributors`.
-- Submit the zip from `bin/build-zip.sh` and request the slug `pnscripts-product-tabs` (WordPress.org derives `pn-product-tabs-custom-tabs-faq` from the plugin name otherwise; the slug can only be changed before approval).
+- Submit the zip from `bin/build-zip.sh` and request the slug `pnscripts-product-tabs` (WordPress.org derives `pn-scripts-product-tabs-custom-tabs-faq` from the plugin name otherwise; the slug can only be changed before approval).
 - After approval: upload `assets/screenshots/*.png` (and a banner/icon) to the SVN `assets/` folder.
+
+## [1.0.2] - 2026-10-06
+
+### Changed
+
+- Plugin name is now "PN Scripts Product Tabs – Custom Tabs & FAQ" (was "PN Product Tabs – Custom Tabs & FAQ"): the WordPress.org review of a sibling plugin (2026-10-06) asked for a distinctive term at the start of the name; "PN" alone is not. Slug, text domain (`pnscripts-product-tabs`), folder and code are unchanged; bundled translations of the name are updated.
 
 ## [1.0.1] - 2026-10-05
 

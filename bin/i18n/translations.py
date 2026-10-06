@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bundled translations (bg_BG, de_DE, pl_PL) for PN Product Tabs.
+"""Bundled translations (bg_BG, de_DE, pl_PL) for PN Scripts Product Tabs.
 
 Regenerates languages/pnscripts-product-tabs-<locale>.po from the .pot; untranslated strings stay empty
 (WordPress falls back to English). Run bin/i18n/update.sh, which also builds the .mo files.
@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 T = {
-    "PN Product Tabs – Custom Tabs & FAQ": ("PN Product Tabs – Custom Tabs & FAQ", "PN Product Tabs – Custom Tabs & FAQ", "PN Product Tabs – Custom Tabs & FAQ"),
+    "PN Scripts Product Tabs – Custom Tabs & FAQ": ("PN Scripts Product Tabs – Custom Tabs & FAQ", "PN Scripts Product Tabs – Custom Tabs & FAQ", "PN Scripts Product Tabs – Custom Tabs & FAQ"),
     "Custom product tabs per product, reusable global tabs by category or tag, FAQ tabs with optional FAQPage schema, rename, reorder or hide the default tabs, and a one-click importer from YIKES Custom Product Tabs. Works in classic and block themes.": (
         "Собствени раздели за всеки продукт, глобални раздели за категории или етикети, раздели с ЧЗВ и FAQPage schema, преименуване, подреждане и скриване на стандартните раздели и импорт с едно кликване от YIKES Custom Product Tabs. Работи с класически и блокови теми.",
         "Eigene Produkt-Tabs pro Produkt, wiederverwendbare globale Tabs nach Kategorie oder Schlagwort, FAQ-Tabs mit optionalem FAQPage-Schema, Umbenennen, Sortieren oder Ausblenden der Standard-Tabs und ein Ein-Klick-Import aus YIKES Custom Product Tabs. Funktioniert mit klassischen und Block-Themes.",
@@ -142,14 +142,14 @@ T = {
     "Import now": ("Импортирай сега", "Jetzt importieren", "Importuj teraz"),
     "Undo import": ("Отмени импорта", "Import rückgängig machen", "Cofnij import"),
     "Notes": ("Бележки", "Hinweise", "Uwagi"),
-    "PN Product Tabs found tabs from Custom Product Tabs for WooCommerce (YIKES). Import them in one click; YIKES data stays untouched.": ("PN Product Tabs откри раздели от Custom Product Tabs for WooCommerce (YIKES). Импортирайте ги с едно кликване; данните на YIKES остават непокътнати.", "PN Product Tabs hat Tabs aus Custom Product Tabs for WooCommerce (YIKES) gefunden. Importieren Sie sie mit einem Klick; die YIKES-Daten bleiben unverändert.", "PN Product Tabs znalazł zakładki z Custom Product Tabs for WooCommerce (YIKES). Zaimportuj je jednym kliknięciem; dane YIKES pozostaną nietknięte."),
+    "PN Scripts Product Tabs found tabs from Custom Product Tabs for WooCommerce (YIKES). Import them in one click; YIKES data stays untouched.": ("PN Scripts Product Tabs откри раздели от Custom Product Tabs for WooCommerce (YIKES). Импортирайте ги с едно кликване; данните на YIKES остават непокътнати.", "PN Scripts Product Tabs hat Tabs aus Custom Product Tabs for WooCommerce (YIKES) gefunden. Importieren Sie sie mit einem Klick; die YIKES-Daten bleiben unverändert.", "PN Scripts Product Tabs znalazł zakładki z Custom Product Tabs for WooCommerce (YIKES). Zaimportuj je jednym kliknięciem; dane YIKES pozostaną nietknięte."),
     "Review the import": ("Прегледай импорта", "Import prüfen", "Sprawdź import"),
     "Dismiss": ("Скрий", "Ausblenden", "Odrzuć"),
     "Saved tab #%d has no title and was skipped.": ("Запазеният раздел №%d няма заглавие и е пропуснат.", "Gespeicherter Tab #%d hat keinen Titel und wurde übersprungen.", "Zapisana zakładka #%d nie ma tytułu i została pominięta."),
     "Saved tab \"%1$s\" was assigned by the taxonomy \"%2$s\", which is not supported; it is imported for the categories and tags only.": ("Запазеният раздел „%1$s“ е бил зададен по таксономията „%2$s“, която не се поддържа; импортира се само за категориите и етикетите.", "Der gespeicherte Tab „%1$s“ wurde über die Taxonomie „%2$s“ zugewiesen, die nicht unterstützt wird; er wird nur für die Kategorien und Schlagwörter importiert.", "Zapisana zakładka „%1$s” była przypisana według taksonomii „%2$s”, która nie jest obsługiwana; importowana jest tylko dla kategorii i tagów."),
     "Product #%d: a tab without a title (never shown by YIKES) was imported switched off.": ("Продукт №%d: раздел без заглавие (никога не показван от YIKES) е импортиран изключен.", "Produkt #%d: Ein Tab ohne Titel (von YIKES nie angezeigt) wurde deaktiviert importiert.", "Produkt #%d: zakładka bez tytułu (nigdy niepokazywana przez YIKES) została zaimportowana jako wyłączona."),
     "Product #%1$d: the tab \"%2$s\" was hidden by a later tab with the same title in YIKES; it was imported switched off.": ("Продукт №%1$d: разделът „%2$s“ е бил скрит от по-късен раздел със същото заглавие в YIKES; импортиран е изключен.", "Produkt #%1$d: Der Tab „%2$s“ wurde in YIKES durch einen späteren Tab mit gleichem Titel verdeckt; er wurde deaktiviert importiert.", "Produkt #%1$d: zakładka „%2$s” była ukryta przez późniejszą zakładkę o tym samym tytule w YIKES; zaimportowano ją jako wyłączoną."),
-    "PN Product Tabs needs WooCommerce %s or newer to be active.": ("PN Product Tabs изисква активен WooCommerce %s или по-нов.", "PN Product Tabs benötigt ein aktives WooCommerce %s oder neuer.", "PN Product Tabs wymaga aktywnego WooCommerce w wersji %s lub nowszej."),
+    "PN Scripts Product Tabs needs WooCommerce %s or newer to be active.": ("PN Scripts Product Tabs изисква активен WooCommerce %s или по-нов.", "PN Scripts Product Tabs benötigt ein aktives WooCommerce %s oder neuer.", "PN Scripts Product Tabs wymaga aktywnego WooCommerce w wersji %s lub nowszej."),
     "Sorry, you are not allowed to view global product tabs.": ("Нямате права да преглеждате глобалните продуктови раздели.", "Sie dürfen globale Produkt-Tabs nicht ansehen.", "Nie masz uprawnień do przeglądania globalnych zakładek produktów."),
     "Global product tabs": ("Глобални продуктови раздели", "Globale Produkt-Tabs", "Globalne zakładki produktów"),
     "Global product tab": ("Глобален продуктов раздел", "Globaler Produkt-Tab", "Globalna zakładka produktu"),

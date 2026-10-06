@@ -1,4 +1,4 @@
-# PN Product Tabs – Custom Tabs & FAQ
+# PN Scripts Product Tabs – Custom Tabs & FAQ
 
 Custom product tabs for WooCommerce: per-product tabs, reusable global tabs by category or tag, FAQ tabs with
 optional FAQPage schema, a manager for the default Description / Additional information / Reviews tabs, and a
@@ -78,5 +78,5 @@ See the checklist in `CHANGELOG.md` → Unreleased notes and the WordPress.org p
 ## Trademarks
 
 WooCommerce is a trademark of Automattic Inc.; YIKES and Custom Product Tabs for WooCommerce belong to their owners.
-This plugin is not affiliated with them. "PN Scripts" and "PN Product Tabs" are trademarks of ПН СКРИПТС ЕООД and
+This plugin is not affiliated with them. "PN Scripts" and "PN Scripts Product Tabs" are trademarks of ПН СКРИПТС ЕООД and
 are not covered by the code licence.

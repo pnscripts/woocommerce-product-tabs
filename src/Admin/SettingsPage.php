@@ -387,7 +387,7 @@ final class SettingsPage {
 		$dismiss = wp_nonce_url( add_query_arg( self::DISMISS_KEY, '1' ), self::DISMISS_KEY );
 		printf(
 			'<div class="notice notice-info"><p>%1$s</p><p><a class="button button-primary" href="%2$s">%3$s</a> <a class="button-link" href="%4$s">%5$s</a></p></div>',
-			esc_html__( 'PN Product Tabs found tabs from Custom Product Tabs for WooCommerce (YIKES). Import them in one click; YIKES data stays untouched.', 'pnscripts-product-tabs' ),
+			esc_html__( 'PN Scripts Product Tabs found tabs from Custom Product Tabs for WooCommerce (YIKES). Import them in one click; YIKES data stays untouched.', 'pnscripts-product-tabs' ),
 			esc_url( self::url( 'import' ) ),
 			esc_html__( 'Review the import', 'pnscripts-product-tabs' ),
 			esc_url( $dismiss ),

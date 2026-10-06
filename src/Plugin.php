@@ -196,7 +196,7 @@ final class Plugin {
 			esc_html(
 				sprintf(
 					/* translators: %s: minimum WooCommerce version */
-					__( 'PN Product Tabs needs WooCommerce %s or newer to be active.', 'pnscripts-product-tabs' ),
+					__( 'PN Scripts Product Tabs needs WooCommerce %s or newer to be active.', 'pnscripts-product-tabs' ),
 					PNSCRIPTS_PRODUCT_TABS_MIN_WC
 				)
 			)

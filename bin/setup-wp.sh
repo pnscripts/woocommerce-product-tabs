@@ -76,7 +76,7 @@ require_once ABSPATH . 'wp-settings.php';
 PHP
 
 # Local test credentials only; the site listens on 127.0.0.1.
-wp core install --url="http://127.0.0.1:$WP_PORT" --title="PN Product Tabs dev" \
+wp core install --url="http://127.0.0.1:$WP_PORT" --title="PN Scripts Product Tabs dev" \
 	--admin_user=admin --admin_password=admin --admin_email=admin@example.test --skip-email --quiet
 # WP-CLI derives a /wp sub-path from the folder name; pin both URLs to the server root.
 wp option update siteurl "http://127.0.0.1:$WP_PORT" --quiet
