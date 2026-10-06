@@ -9,7 +9,7 @@ This repository is part of the DEV workspace and uses the shared **AI Brain** (`
 
 ## Project rules
 
-- Slug, folder and text domain: `pnscripts-product-tabs`; namespace `Pnscripts\ProductTabs`; constants `PNSCRIPTS_PRODUCT_TABS_*`; hooks, options and meta prefixed `pnscripts_product_tabs` (`_pnscripts_product_tabs_*` for private meta); CPT `pnscripts_ptab`.
+- Plugin name: "PN Scripts Tabwise – Custom Product Tabs & FAQ". Slug, folder, main file and text domain: `pnscripts-tabwise` (renamed from `pnscripts-product-tabs` in 1.0.3; the WP-CLI alias `pnscripts-product-tabs` and the old settings page slug redirect stay for 1.0.x users). Code prefix unchanged: namespace `Pnscripts\ProductTabs`; constants `PNSCRIPTS_PRODUCT_TABS_*`; hooks, options and meta prefixed `pnscripts_product_tabs` (`_pnscripts_product_tabs_*` for private meta); CPT `pnscripts_ptab`.
 - The free plugin never locks features (WP.org guideline 5). Pro hooks in through filters/actions and `LicenseInterface`; nothing in this repo calls home.
 - YIKES data is read-only for this plugin: import, re-import and undo must never write or delete `yikes_woo_*` data.
 - Storefront rendering must not add queries per tab: global tabs come from the cached index option.

@@ -1,10 +1,10 @@
-=== PN Scripts Product Tabs – Custom Tabs & FAQ ===
+=== PN Scripts Tabwise – Custom Product Tabs & FAQ ===
 Contributors: pnscripts
 Tags: product tabs, woocommerce tabs, custom tabs, faq, tab manager
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Custom product tabs for WooCommerce: per-product and global tabs, FAQ tabs with 
 
 == Description ==
 
-Add the tabs your product pages need (size guides, shipping and returns, care instructions, warranties, ingredients, FAQs) and manage WooCommerce's own Description, Additional information and Reviews tabs. Everything is free and nothing is locked.
+**PN Scripts Tabwise** adds the tabs your product pages need (size guides, shipping and returns, care instructions, warranties, ingredients, FAQs) and manages WooCommerce's own Description, Additional information and Reviews tabs. Everything is free and nothing is locked.
 
 **Per-product tabs**
 
@@ -50,7 +50,7 @@ The importer copies every product's YIKES tabs and the YIKES saved tabs in one c
 * Dry run first: the report shows exactly what the import will do and changes nothing.
 * YIKES data is only read, never changed. Until you deactivate YIKES, its copy of imported tabs is hidden so nothing shows twice.
 * Safe to run again (no duplicates; unchanged products are skipped), works in batches for large catalogues, and can be undone.
-* Command line: `wp pnscripts-product-tabs import-yikes --dry-run`, then `wp pnscripts-product-tabs import-yikes`.
+* Command line: `wp pnscripts-tabwise import-yikes --dry-run`, then `wp pnscripts-tabwise import-yikes`.
 
 **Built for current WooCommerce**
 
@@ -117,6 +117,9 @@ Not yet. The free plugin is complete and will stay complete; a later add-on may 
 
 == Changelog ==
 
+= 1.0.3 =
+* Renamed to PN Scripts Tabwise – Custom Product Tabs & FAQ; slug and text domain are now `pnscripts-tabwise`. The WP-CLI command is `wp pnscripts-tabwise` (the old `wp pnscripts-product-tabs` still works) and the settings page address is `page=pnscripts-tabwise` (old links are redirected). Tabs, settings and imports are kept.
+
 = 1.0.2 =
 * Plugin name is now "PN Scripts Product Tabs – Custom Tabs & FAQ" (WordPress.org naming: distinctive name first). Slug and text domain stay `pnscripts-product-tabs`. No functional change.
 
@@ -128,6 +131,9 @@ Not yet. The free plugin is complete and will stay complete; a later add-on may 
 * First release: per-product and global tabs, FAQ tabs with FAQPage schema, default tab manager, classic and block theme support, YIKES Custom Product Tabs importer (dry run, batches, re-runnable, undo), WP-CLI commands, Bulgarian, German and Polish translations.
 
 == Upgrade Notice ==
+
+= 1.0.3 =
+New name and slug (pnscripts-tabwise). Tabs and settings are kept. If you installed 1.0.x from GitHub, activate the plugin again after replacing the folder.
 
 = 1.0.2 =
 New display name only, no functional change.

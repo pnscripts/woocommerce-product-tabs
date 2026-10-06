@@ -44,6 +44,6 @@ final class GlobalTabsRestController extends \WP_REST_Posts_Controller {
 		if ( current_user_can( 'edit_products' ) ) {
 			return null;
 		}
-		return new \WP_Error( 'rest_forbidden', __( 'Sorry, you are not allowed to view global product tabs.', 'pnscripts-product-tabs' ), array( 'status' => rest_authorization_required_code() ) );
+		return new \WP_Error( 'rest_forbidden', __( 'Sorry, you are not allowed to view global product tabs.', 'pnscripts-tabwise' ), array( 'status' => rest_authorization_required_code() ) );
 	}
 }

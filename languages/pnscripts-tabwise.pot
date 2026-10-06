@@ -2,45 +2,45 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: PN Scripts Product Tabs 1.0.2\n"
+"Project-Id-Version: PN Scripts Tabwise 1.0.3\n"
 "Report-Msgid-Bugs-To: https://github.com/pnscripts/woocommerce-product-tabs/issues\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-06T07:48:10+00:00\n"
+"POT-Creation-Date: 2026-10-06T08:16:09+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: pnscripts-product-tabs\n"
+"X-Domain: pnscripts-tabwise\n"
 
 #. Plugin Name of the plugin
-#: pnscripts-product-tabs.php
-msgid "PN Scripts Product Tabs – Custom Tabs & FAQ"
+#: pnscripts-tabwise.php
+msgid "PN Scripts Tabwise – Custom Product Tabs & FAQ"
 msgstr ""
 
 #. Plugin URI of the plugin
-#: pnscripts-product-tabs.php
+#: pnscripts-tabwise.php
 msgid "https://pnscripts.com/marketplace/pn-product-tabs"
 msgstr ""
 
 #. Description of the plugin
-#: pnscripts-product-tabs.php
+#: pnscripts-tabwise.php
 msgid "Custom product tabs per product, reusable global tabs by category or tag, FAQ tabs with optional FAQPage schema, rename, reorder or hide the default tabs, and a one-click importer from YIKES Custom Product Tabs. Works in classic and block themes."
 msgstr ""
 
 #. Author of the plugin
-#: pnscripts-product-tabs.php
+#: pnscripts-tabwise.php
 msgid "PN Scripts"
 msgstr ""
 
 #. Author URI of the plugin
-#: pnscripts-product-tabs.php
+#: pnscripts-tabwise.php
 msgid "https://pnscripts.com"
 msgstr ""
 
 #: src/Admin/GlobalTabMetaBox.php:49
-#: src/Admin/SettingsPage.php:63
+#: src/Admin/SettingsPage.php:65
 msgid "Tab settings"
 msgstr ""
 
@@ -131,8 +131,8 @@ msgid "Type"
 msgstr ""
 
 #: src/Admin/GlobalTabMetaBox.php:288
-#: src/Admin/SettingsPage.php:245
-#: src/Admin/SettingsPage.php:262
+#: src/Admin/SettingsPage.php:272
+#: src/Admin/SettingsPage.php:289
 msgid "Priority"
 msgstr ""
 
@@ -155,7 +155,7 @@ msgid "No categories or tags chosen"
 msgstr ""
 
 #: src/Admin/ProductPanel.php:62
-#: src/Admin/SettingsPage.php:269
+#: src/Admin/SettingsPage.php:296
 msgid "Custom tabs"
 msgstr ""
 
@@ -232,8 +232,8 @@ msgid "Imported"
 msgstr ""
 
 #: src/Admin/ProductPanel.php:249
-#: src/Admin/SettingsPage.php:243
-#: src/Admin/SettingsPage.php:256
+#: src/Admin/SettingsPage.php:270
+#: src/Admin/SettingsPage.php:283
 msgid "Show"
 msgstr ""
 
@@ -270,247 +270,247 @@ msgstr ""
 msgid "Reviews"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:62
-#: src/Admin/SettingsPage.php:201
+#: src/Admin/SettingsPage.php:64
+#: src/Admin/SettingsPage.php:228
 msgid "Product tab settings"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:96
-#: src/Admin/SettingsPage.php:203
+#: src/Admin/SettingsPage.php:123
+#: src/Admin/SettingsPage.php:230
 msgid "Settings"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:97
-#: src/Admin/SettingsPage.php:204
+#: src/Admin/SettingsPage.php:124
+#: src/Admin/SettingsPage.php:231
 msgid "Global tabs"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:136
+#: src/Admin/SettingsPage.php:163
 msgid "Import the YIKES tabs now? YIKES data is not changed and you can undo the import."
 msgstr ""
 
-#: src/Admin/SettingsPage.php:137
+#: src/Admin/SettingsPage.php:164
 msgid "Remove all tabs created by the import (tabs you added yourself stay)?"
 msgstr ""
 
 #. translators: %d: number of products handled so far
-#: src/Admin/SettingsPage.php:139
+#: src/Admin/SettingsPage.php:166
 #, php-format
 msgid "Working… %d products handled"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:140
+#: src/Admin/SettingsPage.php:167
 msgid "The request failed. Reload the page and try again."
 msgstr ""
 
-#: src/Admin/SettingsPage.php:141
+#: src/Admin/SettingsPage.php:168
 msgid "Dry run finished: nothing was changed. These numbers are what an import will do."
 msgstr ""
 
-#: src/Admin/SettingsPage.php:142
+#: src/Admin/SettingsPage.php:169
 msgid "Import finished. Check a few product pages, then deactivate YIKES Custom Product Tabs."
 msgstr ""
 
-#: src/Admin/SettingsPage.php:143
+#: src/Admin/SettingsPage.php:170
 msgid "Import removed."
 msgstr ""
 
 #. translators: %d: number of further notes
-#: src/Admin/SettingsPage.php:145
+#: src/Admin/SettingsPage.php:172
 #, php-format
 msgid "… and %d more notes like these."
 msgstr ""
 
-#: src/Admin/SettingsPage.php:158
+#: src/Admin/SettingsPage.php:185
 msgid "Products with YIKES tabs"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:159
+#: src/Admin/SettingsPage.php:186
 msgid "YIKES saved tabs"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:160
+#: src/Admin/SettingsPage.php:187
 msgid "Global tabs to create / created"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:161
+#: src/Admin/SettingsPage.php:188
 msgid "Saved tabs imported before (left as they are)"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:162
+#: src/Admin/SettingsPage.php:189
 msgid "Products to import / imported"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:163
+#: src/Admin/SettingsPage.php:190
 msgid "Products unchanged since the last import (skipped)"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:164
+#: src/Admin/SettingsPage.php:191
 msgid "Product tabs copied"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:165
+#: src/Admin/SettingsPage.php:192
 msgid "Product tabs linked to a global tab"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:166
+#: src/Admin/SettingsPage.php:193
 msgid "Tabs without a title (imported switched off)"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:167
+#: src/Admin/SettingsPage.php:194
 msgid "Tabs hidden by a duplicate title in YIKES (imported switched off)"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:168
+#: src/Admin/SettingsPage.php:195
 msgid "Default tabs YIKES replaced (hidden on those products)"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:169
+#: src/Admin/SettingsPage.php:196
 msgid "Imported global tabs removed"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:170
+#: src/Admin/SettingsPage.php:197
 msgid "Products cleaned"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:180
+#: src/Admin/SettingsPage.php:207
 msgid "You are not allowed to import tabs."
 msgstr ""
 
-#: src/Admin/SettingsPage.php:205
+#: src/Admin/SettingsPage.php:232
 msgid "Import from YIKES"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:229
+#: src/Admin/SettingsPage.php:256
 msgid "WooCommerce tabs"
 msgstr ""
 
 #. translators: %s: the literal placeholder "%d" that merchants type into the Reviews title
-#: src/Admin/SettingsPage.php:234
+#: src/Admin/SettingsPage.php:261
 #, php-format
 msgid "Rename, reorder or hide the standard tabs on every product (single products can hide them too, under Product data → Custom tabs). Leave a title empty to keep WooCommerce's title; in the Reviews title, %s becomes the number of reviews."
 msgstr ""
 
-#: src/Admin/SettingsPage.php:242
+#: src/Admin/SettingsPage.php:269
 msgid "Tab"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:244
-#: src/Admin/SettingsPage.php:259
+#: src/Admin/SettingsPage.php:271
+#: src/Admin/SettingsPage.php:286
 msgid "Title"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:272
+#: src/Admin/SettingsPage.php:299
 msgid "Priority of product tabs"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:275
+#: src/Admin/SettingsPage.php:302
 msgid "The first tab added on a product gets this priority, the next one +1, and so on. 25 places them between Additional information and Reviews. Global tabs have their own priority."
 msgstr ""
 
-#: src/Admin/SettingsPage.php:279
+#: src/Admin/SettingsPage.php:306
 msgid "Display"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:282
+#: src/Admin/SettingsPage.php:309
 msgid "Keep Reviews as the last tab"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:283
+#: src/Admin/SettingsPage.php:310
 msgid "Repeat the tab title as a heading inside the tab (classic tabs; never inside accordions)"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:284
+#: src/Admin/SettingsPage.php:311
 msgid "Output FAQPage structured data for FAQ tabs that allow it (turn off if your SEO plugin already adds FAQ markup)"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:285
+#: src/Admin/SettingsPage.php:312
 msgid "While YIKES Custom Product Tabs is still active, hide its copy of tabs that were imported"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:290
+#: src/Admin/SettingsPage.php:317
 msgid "Uninstall"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:292
+#: src/Admin/SettingsPage.php:319
 msgid "Delete all tabs and settings of this plugin when it is deleted from the Plugins screen"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:293
+#: src/Admin/SettingsPage.php:320
 msgid "Off by default, so deleting and reinstalling the plugin keeps your tabs. YIKES data is never touched."
 msgstr ""
 
-#: src/Admin/SettingsPage.php:327
+#: src/Admin/SettingsPage.php:354
 msgid "Copies the tabs of \"Custom Product Tabs for WooCommerce\" by YIKES: every product's tabs (in the same order, with the same content) and the saved tabs, which become global tabs. Products that used a saved tab are linked to the new global tab, so editing it updates them all. Saved tabs that the YIKES Pro add-on assigned to all products or to categories/tags keep those rules."
 msgstr ""
 
-#: src/Admin/SettingsPage.php:329
+#: src/Admin/SettingsPage.php:356
 msgid "YIKES data is only read. Nothing is changed or deleted, and YIKES keeps working until you deactivate it."
 msgstr ""
 
-#: src/Admin/SettingsPage.php:330
+#: src/Admin/SettingsPage.php:357
 msgid "Running it again is safe: tabs are never duplicated, and products whose YIKES tabs did not change are skipped."
 msgstr ""
 
-#: src/Admin/SettingsPage.php:331
+#: src/Admin/SettingsPage.php:358
 msgid "Tabs YIKES never showed (no title, or hidden by another tab with the same title) are imported switched off and listed below."
 msgstr ""
 
-#: src/Admin/SettingsPage.php:332
-msgid "Large catalogues are handled in batches of 100 products. Command line: wp pnscripts-product-tabs import-yikes --dry-run"
+#: src/Admin/SettingsPage.php:359
+msgid "Large catalogues are handled in batches of 100 products. Command line: wp pnscripts-tabwise import-yikes --dry-run"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:335
+#: src/Admin/SettingsPage.php:362
 msgid "Found:"
 msgstr ""
 
 #. translators: %d: number of products
-#: src/Admin/SettingsPage.php:339
+#: src/Admin/SettingsPage.php:366
 #, php-format
 msgid "%d product with YIKES tabs"
 msgid_plural "%d products with YIKES tabs"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/Admin/SettingsPage.php:343
+#: src/Admin/SettingsPage.php:370
 msgid "YIKES plugin active"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:343
+#: src/Admin/SettingsPage.php:370
 msgid "YIKES plugin not active (data can still be imported)"
 msgstr ""
 
 #. translators: %s: date and time
-#: src/Admin/SettingsPage.php:349
+#: src/Admin/SettingsPage.php:376
 #, php-format
 msgid "last import: %s"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:356
+#: src/Admin/SettingsPage.php:383
 msgid "Dry run (change nothing)"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:357
+#: src/Admin/SettingsPage.php:384
 msgid "Import now"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:358
+#: src/Admin/SettingsPage.php:385
 msgid "Undo import"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:363
+#: src/Admin/SettingsPage.php:390
 msgid "Notes"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:390
-msgid "PN Scripts Product Tabs found tabs from Custom Product Tabs for WooCommerce (YIKES). Import them in one click; YIKES data stays untouched."
+#: src/Admin/SettingsPage.php:417
+msgid "PN Scripts Tabwise found tabs from Custom Product Tabs for WooCommerce (YIKES). Import them in one click; YIKES data stays untouched."
 msgstr ""
 
-#: src/Admin/SettingsPage.php:392
+#: src/Admin/SettingsPage.php:419
 msgid "Review the import"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:394
+#: src/Admin/SettingsPage.php:421
 msgid "Dismiss"
 msgstr ""
 
@@ -539,9 +539,9 @@ msgid "Product #%1$d: the tab \"%2$s\" was hidden by a later tab with the same t
 msgstr ""
 
 #. translators: %s: minimum WooCommerce version
-#: src/Plugin.php:199
+#: src/Plugin.php:202
 #, php-format
-msgid "PN Scripts Product Tabs needs WooCommerce %s or newer to be active."
+msgid "PN Scripts Tabwise needs WooCommerce %s or newer to be active."
 msgstr ""
 
 #: src/Storage/GlobalTabs.php:68

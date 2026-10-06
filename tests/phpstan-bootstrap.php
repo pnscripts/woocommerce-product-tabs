@@ -6,7 +6,7 @@
  */
 
 define( 'PNSCRIPTS_PRODUCT_TABS_VERSION', '1.0.2' );
-define( 'PNSCRIPTS_PRODUCT_TABS_FILE', __DIR__ . '/../pnscripts-product-tabs.php' );
+define( 'PNSCRIPTS_PRODUCT_TABS_FILE', __DIR__ . '/../pnscripts-tabwise.php' );
 define( 'PNSCRIPTS_PRODUCT_TABS_DIR', __DIR__ . '/../' );
-define( 'PNSCRIPTS_PRODUCT_TABS_URL', 'https://example.test/wp-content/plugins/pnscripts-product-tabs/' );
+define( 'PNSCRIPTS_PRODUCT_TABS_URL', 'https://example.test/wp-content/plugins/pnscripts-tabwise/' );
 define( 'PNSCRIPTS_PRODUCT_TABS_MIN_WC', '9.0' );

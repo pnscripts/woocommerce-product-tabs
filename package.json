@@ -1,7 +1,7 @@
 {
-  "name": "pnscripts-product-tabs",
+  "name": "pnscripts-tabwise",
   "private": true,
-  "description": "Dev tooling for PN Scripts Product Tabs (screenshots, i18n helpers). Not shipped.",
+  "description": "Dev tooling for PN Scripts Tabwise (screenshots, i18n helpers). Not shipped.",
   "license": "GPL-2.0-or-later",
   "scripts": {
     "screenshots": "node bin/screenshots.mjs"

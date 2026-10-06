@@ -1,5 +1,5 @@
 /**
- * PN Scripts Product Tabs: YIKES import runner (batches over admin-ajax, summed report).
+ * PN Scripts Tabwise: YIKES import runner (batches over admin-ajax, summed report).
  *
  * @package Pnscripts\ProductTabs
  */

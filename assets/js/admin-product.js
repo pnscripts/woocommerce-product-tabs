@@ -1,5 +1,5 @@
 /**
- * PN Scripts Product Tabs: product data panel (add, reorder, remove tabs; lazy editors).
+ * PN Scripts Tabwise: product data panel (add, reorder, remove tabs; lazy editors).
  *
  * @package Pnscripts\ProductTabs
  */

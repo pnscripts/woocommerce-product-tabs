@@ -4,7 +4,7 @@ includes:
 parameters:
 	level: 8
 	paths:
-		- pnscripts-product-tabs.php
+		- pnscripts-tabwise.php
 		- uninstall.php
 		- src
 	scanFiles:

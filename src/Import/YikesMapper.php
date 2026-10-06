@@ -79,7 +79,7 @@ final class YikesMapper {
 			}
 			if ( '' === trim( $title ) ) {
 				/* translators: %d: YIKES saved tab id */
-				$warnings[] = sprintf( __( 'Saved tab #%d has no title and was skipped.', 'pnscripts-product-tabs' ), $id );
+				$warnings[] = sprintf( __( 'Saved tab #%d has no title and was skipped.', 'pnscripts-tabwise' ), $id );
 				continue;
 			}
 			$categories = array();
@@ -95,7 +95,7 @@ final class YikesMapper {
 					$tags = TabSanitizer::id_list( array_keys( $terms ) );
 				} else {
 					/* translators: 1: saved tab title, 2: taxonomy name */
-					$warnings[] = sprintf( __( 'Saved tab "%1$s" was assigned by the taxonomy "%2$s", which is not supported; it is imported for the categories and tags only.', 'pnscripts-product-tabs' ), $title, (string) $taxonomy );
+					$warnings[] = sprintf( __( 'Saved tab "%1$s" was assigned by the taxonomy "%2$s", which is not supported; it is imported for the categories and tags only.', 'pnscripts-tabwise' ), $title, (string) $taxonomy );
 				}
 			}
 			$global = TabSanitizer::bool( $row['global_tab'] ?? false );
@@ -191,11 +191,11 @@ final class YikesMapper {
 				}
 				++$plan['disabled_empty'];
 				/* translators: %d: product id */
-				$plan['warnings'][] = sprintf( __( 'Product #%d: a tab without a title (never shown by YIKES) was imported switched off.', 'pnscripts-product-tabs' ), $product_id );
+				$plan['warnings'][] = sprintf( __( 'Product #%d: a tab without a title (never shown by YIKES) was imported switched off.', 'pnscripts-tabwise' ), $product_id );
 			} elseif ( ! $enabled ) {
 				++$plan['disabled_duplicate'];
 				/* translators: 1: product id, 2: tab title */
-				$plan['warnings'][] = sprintf( __( 'Product #%1$d: the tab "%2$s" was hidden by a later tab with the same title in YIKES; it was imported switched off.', 'pnscripts-product-tabs' ), $product_id, $title );
+				$plan['warnings'][] = sprintf( __( 'Product #%1$d: the tab "%2$s" was hidden by a later tab with the same title in YIKES; it was imported switched off.', 'pnscripts-tabwise' ), $product_id, $title );
 			}
 
 			if ( $enabled && in_array( $key, DefaultTabs::KEYS, true ) && ! in_array( $key, $plan['hidden_defaults'], true ) ) {

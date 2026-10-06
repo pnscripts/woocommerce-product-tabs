@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# Builds the distributable plugin (build/pnscripts-product-tabs/ and build/pnscripts-product-tabs-<version>.zip),
+# Builds the distributable plugin (build/pnscripts-tabwise/ and build/pnscripts-tabwise-<version>.zip),
 # leaving out everything listed in .distignore (tests, tooling, vendor, screenshots).
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-SLUG="pnscripts-product-tabs"
+SLUG="pnscripts-tabwise"
 VERSION="$(sed -n 's/^ \* Version: *//p' "$ROOT/$SLUG.php" | head -1 | tr -d '[:space:]')"
 OUT="$ROOT/build"
 rm -rf "$OUT"

@@ -15,7 +15,7 @@ use Pnscripts\ProductTabs\Plugin;
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Manage PN Scripts Product Tabs.
+ * Manage PN Scripts Tabwise.
  */
 final class Command {
 
@@ -54,9 +54,9 @@ final class Command {
 	 *
 	 * ## EXAMPLES
 	 *
-	 *     wp pnscripts-product-tabs import-yikes --dry-run
-	 *     wp pnscripts-product-tabs import-yikes
-	 *     wp pnscripts-product-tabs import-yikes --undo
+	 *     wp pnscripts-tabwise import-yikes --dry-run
+	 *     wp pnscripts-tabwise import-yikes
+	 *     wp pnscripts-tabwise import-yikes --undo
 	 *
 	 * @subcommand import-yikes
 	 *

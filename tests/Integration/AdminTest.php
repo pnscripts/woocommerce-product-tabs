@@ -205,6 +205,24 @@ final class AdminTest extends IntegrationTestCase {
 		$this->assertArrayNotHasKey( 'submitted', $stored );
 	}
 
+	public function test_legacy_page_slug_redirects_to_the_renamed_page(): void {
+		$_GET = array(
+			'post_type' => 'product',
+			'page'      => SettingsPage::LEGACY_SLUG,
+			'tab'       => 'import',
+		);
+		wp_set_current_user( $this->user( 'subscriber' ) );
+		$this->assertNull( SettingsPage::legacy_redirect_url(), 'Only shop managers are redirected.' );
+
+		wp_set_current_user( $this->user( 'shop_manager' ) );
+		$this->assertSame( SettingsPage::url( 'import' ), SettingsPage::legacy_redirect_url() );
+		$this->assertStringContainsString( 'page=pnscripts-tabwise', (string) SettingsPage::legacy_redirect_url() );
+
+		$_GET['page'] = SettingsPage::SLUG;
+		$this->assertNull( SettingsPage::legacy_redirect_url() );
+		$_GET = array();
+	}
+
 	public function test_uninstall_keeps_data_unless_opted_in(): void {
 		$id = $this->product( 'Keep' );
 		$this->plugin->product_tabs->save(
@@ -217,7 +235,7 @@ final class AdminTest extends IntegrationTestCase {
 		update_option( 'yikes_woo_reusable_products_tabs', array( 1 => array( 'tab_title' => 'YIKES' ) ) );
 
 		if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
-			define( 'WP_UNINSTALL_PLUGIN', 'pnscripts-product-tabs/pnscripts-product-tabs.php' );
+			define( 'WP_UNINSTALL_PLUGIN', 'pnscripts-tabwise/pnscripts-tabwise.php' );
 		}
 		require_once PNSCRIPTS_PRODUCT_TABS_DIR . 'uninstall.php';
 		$this->assertNotSame( '', get_post_meta( $id, '_pnscripts_product_tabs', true ) );
