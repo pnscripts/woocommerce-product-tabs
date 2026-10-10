@@ -15,7 +15,7 @@ use Pnscripts\ProductTabs\Plugin;
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Manage PN Scripts Tabwise.
+ * Manage PN Scripts Tabcrest.
  */
 final class Command {
 
@@ -54,9 +54,9 @@ final class Command {
 	 *
 	 * ## EXAMPLES
 	 *
-	 *     wp pnscripts-tabwise import-yikes --dry-run
-	 *     wp pnscripts-tabwise import-yikes
-	 *     wp pnscripts-tabwise import-yikes --undo
+	 *     wp pnscripts-tabcrest import-yikes --dry-run
+	 *     wp pnscripts-tabcrest import-yikes
+	 *     wp pnscripts-tabcrest import-yikes --undo
 	 *
 	 * @subcommand import-yikes
 	 *

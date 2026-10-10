@@ -59,7 +59,7 @@ final class ProductPanel {
 	public function add_tab( mixed $tabs ): array {
 		$tabs                           = is_array( $tabs ) ? $tabs : array();
 		$tabs['pnscripts_product_tabs'] = array(
-			'label'    => __( 'Custom tabs', 'pnscripts-tabwise' ),
+			'label'    => __( 'Custom tabs', 'pnscripts-tabcrest' ),
 			'target'   => 'pnscripts_product_tabs_panel',
 			'class'    => array(),
 			'priority' => 75,
@@ -87,8 +87,8 @@ final class ProductPanel {
 			'pnscripts-product-tabs-product',
 			'pnscriptsProductTabs',
 			array(
-				'confirmRemove' => __( 'Remove this tab? It is deleted when you update the product.', 'pnscripts-tabwise' ),
-				'untitled'      => __( '(no title)', 'pnscripts-tabwise' ),
+				'confirmRemove' => __( 'Remove this tab? It is deleted when you update the product.', 'pnscripts-tabcrest' ),
+				'untitled'      => __( '(no title)', 'pnscripts-tabcrest' ),
 			)
 		);
 	}
@@ -119,7 +119,7 @@ final class ProductPanel {
 			<?php wp_nonce_field( self::NONCE, self::NONCE . '_nonce' ); ?>
 			<input type="hidden" name="<?php echo esc_attr( self::FIELD ); ?>[submitted]" value="1" />
 			<div class="pnscripts-pt__section">
-				<p class="pnscripts-pt__intro"><?php esc_html_e( 'Tabs shown on this product, in this order (drag to reorder). Rich-text tabs accept anything the editor does; FAQ tabs show questions as an accessible list and can publish FAQPage structured data.', 'pnscripts-tabwise' ); ?></p>
+				<p class="pnscripts-pt__intro"><?php esc_html_e( 'Tabs shown on this product, in this order (drag to reorder). Rich-text tabs accept anything the editor does; FAQ tabs show questions as an accessible list and can publish FAQPage structured data.', 'pnscripts-tabcrest' ); ?></p>
 				<ul class="pnscripts-pt__list" data-pnscripts-pt-list>
 					<?php
 					foreach ( $tabs as $index => $tab ) {
@@ -127,21 +127,21 @@ final class ProductPanel {
 					}
 					?>
 				</ul>
-				<p class="pnscripts-pt__empty<?php echo array() === $tabs ? '' : ' hidden'; ?>" data-pnscripts-pt-empty><?php esc_html_e( 'No custom tabs on this product yet.', 'pnscripts-tabwise' ); ?></p>
+				<p class="pnscripts-pt__empty<?php echo array() === $tabs ? '' : ' hidden'; ?>" data-pnscripts-pt-empty><?php esc_html_e( 'No custom tabs on this product yet.', 'pnscripts-tabcrest' ); ?></p>
 				<p class="pnscripts-pt__toolbar">
-					<button type="button" class="button" data-pnscripts-pt-add="content"><?php esc_html_e( 'Add tab', 'pnscripts-tabwise' ); ?></button>
-					<button type="button" class="button" data-pnscripts-pt-add="faq"><?php esc_html_e( 'Add FAQ tab', 'pnscripts-tabwise' ); ?></button>
+					<button type="button" class="button" data-pnscripts-pt-add="content"><?php esc_html_e( 'Add tab', 'pnscripts-tabcrest' ); ?></button>
+					<button type="button" class="button" data-pnscripts-pt-add="faq"><?php esc_html_e( 'Add FAQ tab', 'pnscripts-tabcrest' ); ?></button>
 					<?php if ( array() !== $globals ) : ?>
-						<label class="screen-reader-text" for="pnscripts-pt-global-select"><?php esc_html_e( 'Global tab to add', 'pnscripts-tabwise' ); ?></label>
+						<label class="screen-reader-text" for="pnscripts-pt-global-select"><?php esc_html_e( 'Global tab to add', 'pnscripts-tabcrest' ); ?></label>
 						<select id="pnscripts-pt-global-select" data-pnscripts-pt-global-select>
-							<option value=""><?php esc_html_e( 'Add a global tab…', 'pnscripts-tabwise' ); ?></option>
+							<option value=""><?php esc_html_e( 'Add a global tab…', 'pnscripts-tabcrest' ); ?></option>
 							<?php foreach ( $globals as $global ) : ?>
 								<option value="<?php echo esc_attr( (string) $global['id'] ); ?>" data-title="<?php echo esc_attr( $global['title'] ); ?>"><?php echo esc_html( $global['title'] ); ?></option>
 							<?php endforeach; ?>
 						</select>
-						<button type="button" class="button" data-pnscripts-pt-add="global"><?php esc_html_e( 'Add', 'pnscripts-tabwise' ); ?></button>
+						<button type="button" class="button" data-pnscripts-pt-add="global"><?php esc_html_e( 'Add', 'pnscripts-tabcrest' ); ?></button>
 					<?php endif; ?>
-					<a class="pnscripts-pt__manage" href="<?php echo esc_url( admin_url( 'edit.php?post_type=' . GlobalTabs::POST_TYPE ) ); ?>"><?php esc_html_e( 'Manage global tabs', 'pnscripts-tabwise' ); ?></a>
+					<a class="pnscripts-pt__manage" href="<?php echo esc_url( admin_url( 'edit.php?post_type=' . GlobalTabs::POST_TYPE ) ); ?>"><?php esc_html_e( 'Manage global tabs', 'pnscripts-tabcrest' ); ?></a>
 				</p>
 			</div>
 
@@ -158,7 +158,7 @@ final class ProductPanel {
 			if ( array() !== $automatic ) :
 				?>
 				<div class="pnscripts-pt__section">
-					<h4><?php esc_html_e( 'Global tabs shown automatically', 'pnscripts-tabwise' ); ?></h4>
+					<h4><?php esc_html_e( 'Global tabs shown automatically', 'pnscripts-tabcrest' ); ?></h4>
 					<?php foreach ( $automatic as $global ) : ?>
 						<p class="form-field pnscripts-pt__check">
 							<label>
@@ -166,7 +166,7 @@ final class ProductPanel {
 								<?php
 								printf(
 									/* translators: %s: tab title */
-									esc_html__( 'Hide "%s" on this product', 'pnscripts-tabwise' ),
+									esc_html__( 'Hide "%s" on this product', 'pnscripts-tabcrest' ),
 									esc_html( $global['title'] )
 								);
 								?>
@@ -177,7 +177,7 @@ final class ProductPanel {
 			<?php endif; ?>
 
 			<div class="pnscripts-pt__section">
-				<h4><?php esc_html_e( 'WooCommerce tabs on this product', 'pnscripts-tabwise' ); ?></h4>
+				<h4><?php esc_html_e( 'WooCommerce tabs on this product', 'pnscripts-tabcrest' ); ?></h4>
 				<?php
 				foreach ( self::default_labels() as $key => $label ) :
 					?>
@@ -187,7 +187,7 @@ final class ProductPanel {
 							<?php
 							printf(
 								/* translators: %s: tab title */
-								esc_html__( 'Hide "%s" on this product', 'pnscripts-tabwise' ),
+								esc_html__( 'Hide "%s" on this product', 'pnscripts-tabcrest' ),
 								esc_html( $label )
 							);
 							?>
@@ -226,29 +226,29 @@ final class ProductPanel {
 		$is_new   = '__INDEX__' === $index;
 		$editor   = 'pnscripts-pt-content-' . $index;
 		$global   = TabSanitizer::TYPE_GLOBAL === $tab['type'] ? ( $globals[ $tab['global_id'] ] ?? null ) : null;
-		$title    = TabSanitizer::TYPE_GLOBAL === $tab['type'] ? ( null !== $global ? $global['title'] : __( '(deleted global tab)', 'pnscripts-tabwise' ) ) : $tab['title'];
+		$title    = TabSanitizer::TYPE_GLOBAL === $tab['type'] ? ( null !== $global ? $global['title'] : __( '(deleted global tab)', 'pnscripts-tabcrest' ) ) : $tab['title'];
 		$type_txt = array(
-			TabSanitizer::TYPE_CONTENT => __( 'Rich text', 'pnscripts-tabwise' ),
-			TabSanitizer::TYPE_FAQ     => __( 'FAQ', 'pnscripts-tabwise' ),
-			TabSanitizer::TYPE_GLOBAL  => __( 'Global', 'pnscripts-tabwise' ),
+			TabSanitizer::TYPE_CONTENT => __( 'Rich text', 'pnscripts-tabcrest' ),
+			TabSanitizer::TYPE_FAQ     => __( 'FAQ', 'pnscripts-tabcrest' ),
+			TabSanitizer::TYPE_GLOBAL  => __( 'Global', 'pnscripts-tabcrest' ),
 		)[ $tab['type'] ] ?? '';
 		?>
 		<li class="pnscripts-pt__row<?php echo $tab['enabled'] ? '' : ' is-disabled'; ?><?php echo $is_new ? ' is-open' : ''; ?>" data-pnscripts-pt-row data-index="<?php echo esc_attr( $index ); ?>" data-type="<?php echo esc_attr( $tab['type'] ); ?>">
 			<div class="pnscripts-pt__head">
-				<span class="pnscripts-pt__handle dashicons dashicons-menu" aria-hidden="true" title="<?php esc_attr_e( 'Drag to reorder', 'pnscripts-tabwise' ); ?>"></span>
+				<span class="pnscripts-pt__handle dashicons dashicons-menu" aria-hidden="true" title="<?php esc_attr_e( 'Drag to reorder', 'pnscripts-tabcrest' ); ?>"></span>
 				<button type="button" class="pnscripts-pt__toggle" aria-expanded="<?php echo $is_new ? 'true' : 'false'; ?>" data-pnscripts-pt-toggle>
-					<span class="pnscripts-pt__title" data-pnscripts-pt-title><?php echo '' !== $title ? esc_html( $title ) : esc_html__( '(no title)', 'pnscripts-tabwise' ); ?></span>
+					<span class="pnscripts-pt__title" data-pnscripts-pt-title><?php echo '' !== $title ? esc_html( $title ) : esc_html__( '(no title)', 'pnscripts-tabcrest' ); ?></span>
 					<span class="pnscripts-pt__badge"><?php echo esc_html( $type_txt ); ?></span>
 					<?php if ( str_starts_with( $tab['origin'], 'yikes' ) ) : ?>
-						<span class="pnscripts-pt__badge pnscripts-pt__badge--import"><?php esc_html_e( 'Imported', 'pnscripts-tabwise' ); ?></span>
+						<span class="pnscripts-pt__badge pnscripts-pt__badge--import"><?php esc_html_e( 'Imported', 'pnscripts-tabcrest' ); ?></span>
 					<?php endif; ?>
 				</button>
 				<label class="pnscripts-pt__enabled">
 					<input type="hidden" name="<?php echo esc_attr( $name ); ?>[enabled]" value="0" />
 					<input type="checkbox" name="<?php echo esc_attr( $name ); ?>[enabled]" value="1" <?php checked( $tab['enabled'] ); ?> data-pnscripts-pt-enabled />
-					<?php esc_html_e( 'Show', 'pnscripts-tabwise' ); ?>
+					<?php esc_html_e( 'Show', 'pnscripts-tabcrest' ); ?>
 				</label>
-				<button type="button" class="button-link button-link-delete pnscripts-pt__remove" data-pnscripts-pt-remove><?php esc_html_e( 'Remove', 'pnscripts-tabwise' ); ?></button>
+				<button type="button" class="button-link button-link-delete pnscripts-pt__remove" data-pnscripts-pt-remove><?php esc_html_e( 'Remove', 'pnscripts-tabcrest' ); ?></button>
 			</div>
 			<input type="hidden" name="<?php echo esc_attr( $name ); ?>[id]" value="<?php echo esc_attr( $is_new ? '' : $tab['id'] ); ?>" />
 			<input type="hidden" name="<?php echo esc_attr( $name ); ?>[type]" value="<?php echo esc_attr( $tab['type'] ); ?>" />
@@ -257,14 +257,14 @@ final class ProductPanel {
 				<?php if ( TabSanitizer::TYPE_GLOBAL === $tab['type'] ) : ?>
 					<input type="hidden" name="<?php echo esc_attr( $name ); ?>[global_id]" value="<?php echo esc_attr( $is_new ? '' : (string) $tab['global_id'] ); ?>" data-pnscripts-pt-global-id />
 					<p class="pnscripts-pt__note">
-						<?php esc_html_e( 'Content comes from the global tab and updates everywhere when you edit it.', 'pnscripts-tabwise' ); ?>
+						<?php esc_html_e( 'Content comes from the global tab and updates everywhere when you edit it.', 'pnscripts-tabcrest' ); ?>
 						<?php if ( null !== $global ) : ?>
-							<a href="<?php echo esc_url( (string) get_edit_post_link( $global['id'] ) ); ?>"><?php esc_html_e( 'Edit global tab', 'pnscripts-tabwise' ); ?></a>
+							<a href="<?php echo esc_url( (string) get_edit_post_link( $global['id'] ) ); ?>"><?php esc_html_e( 'Edit global tab', 'pnscripts-tabcrest' ); ?></a>
 						<?php endif; ?>
 					</p>
 				<?php else : ?>
 					<p class="form-field">
-						<label for="pnscripts-pt-title-<?php echo esc_attr( $index ); ?>"><?php esc_html_e( 'Tab title', 'pnscripts-tabwise' ); ?></label>
+						<label for="pnscripts-pt-title-<?php echo esc_attr( $index ); ?>"><?php esc_html_e( 'Tab title', 'pnscripts-tabcrest' ); ?></label>
 						<input type="text" class="short" id="pnscripts-pt-title-<?php echo esc_attr( $index ); ?>" name="<?php echo esc_attr( $name ); ?>[title]" value="<?php echo esc_attr( $tab['title'] ); ?>" data-pnscripts-pt-title-input />
 					</p>
 					<?php if ( TabSanitizer::TYPE_FAQ === $tab['type'] ) : ?>
@@ -276,16 +276,16 @@ final class ProductPanel {
 							?>
 						</div>
 						<p class="pnscripts-pt__faq-actions">
-							<button type="button" class="button" data-pnscripts-pt-faq-add><?php esc_html_e( 'Add question', 'pnscripts-tabwise' ); ?></button>
+							<button type="button" class="button" data-pnscripts-pt-faq-add><?php esc_html_e( 'Add question', 'pnscripts-tabcrest' ); ?></button>
 							<label>
 								<input type="hidden" name="<?php echo esc_attr( $name ); ?>[schema]" value="0" />
 								<input type="checkbox" name="<?php echo esc_attr( $name ); ?>[schema]" value="1" <?php checked( $tab['schema'] ); ?> />
-								<?php esc_html_e( 'Publish as FAQPage structured data', 'pnscripts-tabwise' ); ?>
+								<?php esc_html_e( 'Publish as FAQPage structured data', 'pnscripts-tabcrest' ); ?>
 							</label>
 						</p>
 					<?php else : ?>
 						<div class="pnscripts-pt__editor">
-							<label class="screen-reader-text" for="<?php echo esc_attr( $editor ); ?>"><?php esc_html_e( 'Tab content', 'pnscripts-tabwise' ); ?></label>
+							<label class="screen-reader-text" for="<?php echo esc_attr( $editor ); ?>"><?php esc_html_e( 'Tab content', 'pnscripts-tabcrest' ); ?></label>
 							<textarea class="wp-editor-area" id="<?php echo esc_attr( $editor ); ?>" name="<?php echo esc_attr( $name ); ?>[content]" rows="10" data-pnscripts-pt-editor><?php echo esc_textarea( $tab['content'] ); ?></textarea>
 						</div>
 					<?php endif; ?>
@@ -305,13 +305,13 @@ final class ProductPanel {
 		?>
 		<div class="pnscripts-pt__faq-item" data-pnscripts-pt-faq-item>
 			<p class="form-field">
-				<label><?php esc_html_e( 'Question', 'pnscripts-tabwise' ); ?></label>
+				<label><?php esc_html_e( 'Question', 'pnscripts-tabcrest' ); ?></label>
 				<input type="text" class="short" name="<?php echo esc_attr( $name ); ?>[q]" value="<?php echo esc_attr( $item['q'] ); ?>" />
 			</p>
 			<p class="form-field">
-				<label><?php esc_html_e( 'Answer', 'pnscripts-tabwise' ); ?></label>
+				<label><?php esc_html_e( 'Answer', 'pnscripts-tabcrest' ); ?></label>
 				<textarea class="short" rows="3" name="<?php echo esc_attr( $name ); ?>[a]"><?php echo esc_textarea( $item['a'] ); ?></textarea>
-				<button type="button" class="button-link button-link-delete" data-pnscripts-pt-faq-remove><?php esc_html_e( 'Remove question', 'pnscripts-tabwise' ); ?></button>
+				<button type="button" class="button-link button-link-delete" data-pnscripts-pt-faq-remove><?php esc_html_e( 'Remove question', 'pnscripts-tabcrest' ); ?></button>
 			</p>
 		</div>
 		<?php
@@ -389,9 +389,9 @@ final class ProductPanel {
 	 */
 	public static function default_labels(): array {
 		$labels = array(
-			'description'            => __( 'Description', 'pnscripts-tabwise' ),
-			'additional_information' => __( 'Additional information', 'pnscripts-tabwise' ),
-			'reviews'                => __( 'Reviews', 'pnscripts-tabwise' ),
+			'description'            => __( 'Description', 'pnscripts-tabcrest' ),
+			'additional_information' => __( 'Additional information', 'pnscripts-tabcrest' ),
+			'reviews'                => __( 'Reviews', 'pnscripts-tabcrest' ),
 		);
 		return array_intersect_key( $labels, array_flip( DefaultTabs::KEYS ) );
 	}

@@ -216,7 +216,7 @@ final class AdminTest extends IntegrationTestCase {
 
 		wp_set_current_user( $this->user( 'shop_manager' ) );
 		$this->assertSame( SettingsPage::url( 'import' ), SettingsPage::legacy_redirect_url() );
-		$this->assertStringContainsString( 'page=pnscripts-tabwise', (string) SettingsPage::legacy_redirect_url() );
+		$this->assertStringContainsString( 'page=pnscripts-tabcrest', (string) SettingsPage::legacy_redirect_url() );
 
 		$_GET['page'] = SettingsPage::SLUG;
 		$this->assertNull( SettingsPage::legacy_redirect_url() );
@@ -235,7 +235,7 @@ final class AdminTest extends IntegrationTestCase {
 		update_option( 'yikes_woo_reusable_products_tabs', array( 1 => array( 'tab_title' => 'YIKES' ) ) );
 
 		if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
-			define( 'WP_UNINSTALL_PLUGIN', 'pnscripts-tabwise/pnscripts-tabwise.php' );
+			define( 'WP_UNINSTALL_PLUGIN', 'pnscripts-tabcrest/pnscripts-tabcrest.php' );
 		}
 		require_once PNSCRIPTS_PRODUCT_TABS_DIR . 'uninstall.php';
 		$this->assertNotSame( '', get_post_meta( $id, '_pnscripts_product_tabs', true ) );

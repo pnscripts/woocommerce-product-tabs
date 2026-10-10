@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit;
  */
 final class SettingsPage {
 
-	public const SLUG         = 'pnscripts-tabwise';
+	public const SLUG         = 'pnscripts-tabcrest';
 	public const LEGACY_SLUG  = 'pnscripts-product-tabs';
 	public const GROUP        = 'pnscripts_product_tabs';
 	public const AJAX_ACTION  = 'pnscripts_product_tabs_import';
@@ -61,8 +61,8 @@ final class SettingsPage {
 	public function menu(): void {
 		add_submenu_page(
 			'edit.php?post_type=product',
-			__( 'Product tab settings', 'pnscripts-tabwise' ),
-			__( 'Tab settings', 'pnscripts-tabwise' ),
+			__( 'Product tab settings', 'pnscripts-tabcrest' ),
+			__( 'Tab settings', 'pnscripts-tabcrest' ),
 			self::CAPABILITY,
 			self::SLUG,
 			array( $this, 'render' )
@@ -120,8 +120,8 @@ final class SettingsPage {
 		$links = is_array( $links ) ? $links : array();
 		array_unshift(
 			$links,
-			sprintf( '<a href="%s">%s</a>', esc_url( self::url() ), esc_html__( 'Settings', 'pnscripts-tabwise' ) ),
-			sprintf( '<a href="%s">%s</a>', esc_url( admin_url( 'edit.php?post_type=' . GlobalTabs::POST_TYPE ) ), esc_html__( 'Global tabs', 'pnscripts-tabwise' ) )
+			sprintf( '<a href="%s">%s</a>', esc_url( self::url() ), esc_html__( 'Settings', 'pnscripts-tabcrest' ) ),
+			sprintf( '<a href="%s">%s</a>', esc_url( admin_url( 'edit.php?post_type=' . GlobalTabs::POST_TYPE ) ), esc_html__( 'Global tabs', 'pnscripts-tabcrest' ) )
 		);
 		return $links;
 	}
@@ -160,16 +160,16 @@ final class SettingsPage {
 				'ajaxUrl'       => admin_url( 'admin-ajax.php' ),
 				'action'        => self::AJAX_ACTION,
 				'nonce'         => wp_create_nonce( self::AJAX_ACTION ),
-				'confirmImport' => __( 'Import the YIKES tabs now? YIKES data is not changed and you can undo the import.', 'pnscripts-tabwise' ),
-				'confirmUndo'   => __( 'Remove all tabs created by the import (tabs you added yourself stay)?', 'pnscripts-tabwise' ),
+				'confirmImport' => __( 'Import the YIKES tabs now? YIKES data is not changed and you can undo the import.', 'pnscripts-tabcrest' ),
+				'confirmUndo'   => __( 'Remove all tabs created by the import (tabs you added yourself stay)?', 'pnscripts-tabcrest' ),
 				/* translators: %d: number of products handled so far */
-				'running'       => __( 'Working… %d products handled', 'pnscripts-tabwise' ),
-				'failed'        => __( 'The request failed. Reload the page and try again.', 'pnscripts-tabwise' ),
-				'doneDry'       => __( 'Dry run finished: nothing was changed. These numbers are what an import will do.', 'pnscripts-tabwise' ),
-				'doneImport'    => __( 'Import finished. Check a few product pages, then deactivate YIKES Custom Product Tabs.', 'pnscripts-tabwise' ),
-				'doneUndo'      => __( 'Import removed.', 'pnscripts-tabwise' ),
+				'running'       => __( 'Working… %d products handled', 'pnscripts-tabcrest' ),
+				'failed'        => __( 'The request failed. Reload the page and try again.', 'pnscripts-tabcrest' ),
+				'doneDry'       => __( 'Dry run finished: nothing was changed. These numbers are what an import will do.', 'pnscripts-tabcrest' ),
+				'doneImport'    => __( 'Import finished. Check a few product pages, then deactivate YIKES Custom Product Tabs.', 'pnscripts-tabcrest' ),
+				'doneUndo'      => __( 'Import removed.', 'pnscripts-tabcrest' ),
 				/* translators: %d: number of further notes */
-				'moreNotes'     => __( '… and %d more notes like these.', 'pnscripts-tabwise' ),
+				'moreNotes'     => __( '… and %d more notes like these.', 'pnscripts-tabcrest' ),
 				'labels'        => self::report_labels(),
 			)
 		);
@@ -182,19 +182,19 @@ final class SettingsPage {
 	 */
 	public static function report_labels(): array {
 		return array(
-			'products_total'          => __( 'Products with YIKES tabs', 'pnscripts-tabwise' ),
-			'saved_found'             => __( 'YIKES saved tabs', 'pnscripts-tabwise' ),
-			'saved_created'           => __( 'Global tabs to create / created', 'pnscripts-tabwise' ),
-			'saved_existing'          => __( 'Saved tabs imported before (left as they are)', 'pnscripts-tabwise' ),
-			'products_imported'       => __( 'Products to import / imported', 'pnscripts-tabwise' ),
-			'products_unchanged'      => __( 'Products unchanged since the last import (skipped)', 'pnscripts-tabwise' ),
-			'tabs_custom'             => __( 'Product tabs copied', 'pnscripts-tabwise' ),
-			'tabs_linked'             => __( 'Product tabs linked to a global tab', 'pnscripts-tabwise' ),
-			'tabs_disabled_empty'     => __( 'Tabs without a title (imported switched off)', 'pnscripts-tabwise' ),
-			'tabs_disabled_duplicate' => __( 'Tabs hidden by a duplicate title in YIKES (imported switched off)', 'pnscripts-tabwise' ),
-			'replaced_defaults'       => __( 'Default tabs YIKES replaced (hidden on those products)', 'pnscripts-tabwise' ),
-			'removed_globals'         => __( 'Imported global tabs removed', 'pnscripts-tabwise' ),
-			'removed_products'        => __( 'Products cleaned', 'pnscripts-tabwise' ),
+			'products_total'          => __( 'Products with YIKES tabs', 'pnscripts-tabcrest' ),
+			'saved_found'             => __( 'YIKES saved tabs', 'pnscripts-tabcrest' ),
+			'saved_created'           => __( 'Global tabs to create / created', 'pnscripts-tabcrest' ),
+			'saved_existing'          => __( 'Saved tabs imported before (left as they are)', 'pnscripts-tabcrest' ),
+			'products_imported'       => __( 'Products to import / imported', 'pnscripts-tabcrest' ),
+			'products_unchanged'      => __( 'Products unchanged since the last import (skipped)', 'pnscripts-tabcrest' ),
+			'tabs_custom'             => __( 'Product tabs copied', 'pnscripts-tabcrest' ),
+			'tabs_linked'             => __( 'Product tabs linked to a global tab', 'pnscripts-tabcrest' ),
+			'tabs_disabled_empty'     => __( 'Tabs without a title (imported switched off)', 'pnscripts-tabcrest' ),
+			'tabs_disabled_duplicate' => __( 'Tabs hidden by a duplicate title in YIKES (imported switched off)', 'pnscripts-tabcrest' ),
+			'replaced_defaults'       => __( 'Default tabs YIKES replaced (hidden on those products)', 'pnscripts-tabcrest' ),
+			'removed_globals'         => __( 'Imported global tabs removed', 'pnscripts-tabcrest' ),
+			'removed_products'        => __( 'Products cleaned', 'pnscripts-tabcrest' ),
 		);
 	}
 
@@ -204,7 +204,7 @@ final class SettingsPage {
 	public function ajax_import(): void {
 		check_ajax_referer( self::AJAX_ACTION, 'nonce' );
 		if ( ! current_user_can( self::CAPABILITY ) ) {
-			wp_send_json_error( array( 'message' => __( 'You are not allowed to import tabs.', 'pnscripts-tabwise' ) ), 403 );
+			wp_send_json_error( array( 'message' => __( 'You are not allowed to import tabs.', 'pnscripts-tabcrest' ) ), 403 );
 		}
 		$mode   = isset( $_POST['mode'] ) ? sanitize_key( wp_unslash( $_POST['mode'] ) ) : YikesImporter::MODE_DRY;
 		$cursor = isset( $_POST['cursor'] ) ? absint( wp_unslash( $_POST['cursor'] ) ) : 0;
@@ -225,11 +225,11 @@ final class SettingsPage {
 		$tab = isset( $_GET['tab'] ) && 'import' === sanitize_key( wp_unslash( $_GET['tab'] ) ) ? 'import' : 'settings';
 		?>
 		<div class="wrap pnscripts-pt-settings">
-			<h1><?php esc_html_e( 'Product tab settings', 'pnscripts-tabwise' ); ?></h1>
+			<h1><?php esc_html_e( 'Product tab settings', 'pnscripts-tabcrest' ); ?></h1>
 			<nav class="nav-tab-wrapper">
-				<a href="<?php echo esc_url( self::url() ); ?>" class="nav-tab<?php echo 'settings' === $tab ? ' nav-tab-active' : ''; ?>"><?php esc_html_e( 'Settings', 'pnscripts-tabwise' ); ?></a>
-				<a href="<?php echo esc_url( admin_url( 'edit.php?post_type=' . GlobalTabs::POST_TYPE ) ); ?>" class="nav-tab"><?php esc_html_e( 'Global tabs', 'pnscripts-tabwise' ); ?></a>
-				<a href="<?php echo esc_url( self::url( 'import' ) ); ?>" class="nav-tab<?php echo 'import' === $tab ? ' nav-tab-active' : ''; ?>"><?php esc_html_e( 'Import from YIKES', 'pnscripts-tabwise' ); ?></a>
+				<a href="<?php echo esc_url( self::url() ); ?>" class="nav-tab<?php echo 'settings' === $tab ? ' nav-tab-active' : ''; ?>"><?php esc_html_e( 'Settings', 'pnscripts-tabcrest' ); ?></a>
+				<a href="<?php echo esc_url( admin_url( 'edit.php?post_type=' . GlobalTabs::POST_TYPE ) ); ?>" class="nav-tab"><?php esc_html_e( 'Global tabs', 'pnscripts-tabcrest' ); ?></a>
+				<a href="<?php echo esc_url( self::url( 'import' ) ); ?>" class="nav-tab<?php echo 'import' === $tab ? ' nav-tab-active' : ''; ?>"><?php esc_html_e( 'Import from YIKES', 'pnscripts-tabcrest' ); ?></a>
 			</nav>
 			<?php
 			if ( 'import' === $tab ) {
@@ -253,12 +253,12 @@ final class SettingsPage {
 		<form method="post" action="options.php">
 			<?php settings_fields( self::GROUP ); ?>
 			<input type="hidden" name="<?php echo esc_attr( $name ); ?>[submitted]" value="1" />
-			<h2><?php esc_html_e( 'WooCommerce tabs', 'pnscripts-tabwise' ); ?></h2>
+			<h2><?php esc_html_e( 'WooCommerce tabs', 'pnscripts-tabcrest' ); ?></h2>
 			<p>
 				<?php
 				printf(
 					/* translators: %s: the literal placeholder "%d" that merchants type into the Reviews title */
-					esc_html__( 'Rename, reorder or hide the standard tabs on every product (single products can hide them too, under Product data → Custom tabs). Leave a title empty to keep WooCommerce\'s title; in the Reviews title, %s becomes the number of reviews.', 'pnscripts-tabwise' ),
+					esc_html__( 'Rename, reorder or hide the standard tabs on every product (single products can hide them too, under Product data → Custom tabs). Leave a title empty to keep WooCommerce\'s title; in the Reviews title, %s becomes the number of reviews.', 'pnscripts-tabcrest' ),
 					'<code>%d</code>'
 				);
 				?>
@@ -266,10 +266,10 @@ final class SettingsPage {
 			<table class="widefat striped pnscripts-pt-defaults">
 				<thead>
 					<tr>
-						<th scope="col"><?php esc_html_e( 'Tab', 'pnscripts-tabwise' ); ?></th>
-						<th scope="col"><?php esc_html_e( 'Show', 'pnscripts-tabwise' ); ?></th>
-						<th scope="col"><?php esc_html_e( 'Title', 'pnscripts-tabwise' ); ?></th>
-						<th scope="col"><?php esc_html_e( 'Priority', 'pnscripts-tabwise' ); ?></th>
+						<th scope="col"><?php esc_html_e( 'Tab', 'pnscripts-tabcrest' ); ?></th>
+						<th scope="col"><?php esc_html_e( 'Show', 'pnscripts-tabcrest' ); ?></th>
+						<th scope="col"><?php esc_html_e( 'Title', 'pnscripts-tabcrest' ); ?></th>
+						<th scope="col"><?php esc_html_e( 'Priority', 'pnscripts-tabcrest' ); ?></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -280,44 +280,44 @@ final class SettingsPage {
 							<td>
 								<input type="hidden" name="<?php echo esc_attr( $name . '[defaults][' . $key . '][enabled]' ); ?>" value="0" />
 								<input type="checkbox" id="pnscripts-pt-show-<?php echo esc_attr( $key ); ?>" name="<?php echo esc_attr( $name . '[defaults][' . $key . '][enabled]' ); ?>" value="1" <?php checked( $row['enabled'] ); ?> />
-								<label class="screen-reader-text" for="pnscripts-pt-show-<?php echo esc_attr( $key ); ?>"><?php esc_html_e( 'Show', 'pnscripts-tabwise' ); ?></label>
+								<label class="screen-reader-text" for="pnscripts-pt-show-<?php echo esc_attr( $key ); ?>"><?php esc_html_e( 'Show', 'pnscripts-tabcrest' ); ?></label>
 							</td>
 							<td>
-								<input type="text" class="regular-text" aria-label="<?php esc_attr_e( 'Title', 'pnscripts-tabwise' ); ?>" name="<?php echo esc_attr( $name . '[defaults][' . $key . '][title]' ); ?>" value="<?php echo esc_attr( $row['title'] ); ?>" placeholder="<?php echo esc_attr( $labels[ $key ] ?? '' ); ?>" />
+								<input type="text" class="regular-text" aria-label="<?php esc_attr_e( 'Title', 'pnscripts-tabcrest' ); ?>" name="<?php echo esc_attr( $name . '[defaults][' . $key . '][title]' ); ?>" value="<?php echo esc_attr( $row['title'] ); ?>" placeholder="<?php echo esc_attr( $labels[ $key ] ?? '' ); ?>" />
 							</td>
 							<td>
-								<input type="number" class="small-text" min="0" max="999" aria-label="<?php esc_attr_e( 'Priority', 'pnscripts-tabwise' ); ?>" name="<?php echo esc_attr( $name . '[defaults][' . $key . '][priority]' ); ?>" value="<?php echo esc_attr( (string) $row['priority'] ); ?>" />
+								<input type="number" class="small-text" min="0" max="999" aria-label="<?php esc_attr_e( 'Priority', 'pnscripts-tabcrest' ); ?>" name="<?php echo esc_attr( $name . '[defaults][' . $key . '][priority]' ); ?>" value="<?php echo esc_attr( (string) $row['priority'] ); ?>" />
 							</td>
 						</tr>
 					<?php endforeach; ?>
 				</tbody>
 			</table>
 
-			<h2><?php esc_html_e( 'Custom tabs', 'pnscripts-tabwise' ); ?></h2>
+			<h2><?php esc_html_e( 'Custom tabs', 'pnscripts-tabcrest' ); ?></h2>
 			<table class="form-table" role="presentation">
 				<tr>
-					<th scope="row"><label for="pnscripts-pt-custom-priority"><?php esc_html_e( 'Priority of product tabs', 'pnscripts-tabwise' ); ?></label></th>
+					<th scope="row"><label for="pnscripts-pt-custom-priority"><?php esc_html_e( 'Priority of product tabs', 'pnscripts-tabcrest' ); ?></label></th>
 					<td>
 						<input type="number" class="small-text" min="0" max="999" id="pnscripts-pt-custom-priority" name="<?php echo esc_attr( $name ); ?>[custom_priority]" value="<?php echo esc_attr( (string) $s['custom_priority'] ); ?>" />
-						<p class="description"><?php esc_html_e( 'The first tab added on a product gets this priority, the next one +1, and so on. 25 places them between Additional information and Reviews. Global tabs have their own priority.', 'pnscripts-tabwise' ); ?></p>
+						<p class="description"><?php esc_html_e( 'The first tab added on a product gets this priority, the next one +1, and so on. 25 places them between Additional information and Reviews. Global tabs have their own priority.', 'pnscripts-tabcrest' ); ?></p>
 					</td>
 				</tr>
 				<tr>
-					<th scope="row"><?php esc_html_e( 'Display', 'pnscripts-tabwise' ); ?></th>
+					<th scope="row"><?php esc_html_e( 'Display', 'pnscripts-tabcrest' ); ?></th>
 					<td>
 						<?php
-						self::checkbox( 'reviews_last', $s['reviews_last'], __( 'Keep Reviews as the last tab', 'pnscripts-tabwise' ) );
-						self::checkbox( 'show_heading', $s['show_heading'], __( 'Repeat the tab title as a heading inside the tab (classic tabs; never inside accordions)', 'pnscripts-tabwise' ) );
-						self::checkbox( 'faq_schema', $s['faq_schema'], __( 'Output FAQPage structured data for FAQ tabs that allow it (turn off if your SEO plugin already adds FAQ markup)', 'pnscripts-tabwise' ) );
-						self::checkbox( 'hide_yikes', $s['hide_yikes'], __( 'While YIKES Custom Product Tabs is still active, hide its copy of tabs that were imported', 'pnscripts-tabwise' ) );
+						self::checkbox( 'reviews_last', $s['reviews_last'], __( 'Keep Reviews as the last tab', 'pnscripts-tabcrest' ) );
+						self::checkbox( 'show_heading', $s['show_heading'], __( 'Repeat the tab title as a heading inside the tab (classic tabs; never inside accordions)', 'pnscripts-tabcrest' ) );
+						self::checkbox( 'faq_schema', $s['faq_schema'], __( 'Output FAQPage structured data for FAQ tabs that allow it (turn off if your SEO plugin already adds FAQ markup)', 'pnscripts-tabcrest' ) );
+						self::checkbox( 'hide_yikes', $s['hide_yikes'], __( 'While YIKES Custom Product Tabs is still active, hide its copy of tabs that were imported', 'pnscripts-tabcrest' ) );
 						?>
 					</td>
 				</tr>
 				<tr>
-					<th scope="row"><?php esc_html_e( 'Uninstall', 'pnscripts-tabwise' ); ?></th>
+					<th scope="row"><?php esc_html_e( 'Uninstall', 'pnscripts-tabcrest' ); ?></th>
 					<td>
-						<?php self::checkbox( 'remove_data', $s['remove_data'], __( 'Delete all tabs and settings of this plugin when it is deleted from the Plugins screen', 'pnscripts-tabwise' ) ); ?>
-						<p class="description"><?php esc_html_e( 'Off by default, so deleting and reinstalling the plugin keeps your tabs. YIKES data is never touched.', 'pnscripts-tabwise' ); ?></p>
+						<?php self::checkbox( 'remove_data', $s['remove_data'], __( 'Delete all tabs and settings of this plugin when it is deleted from the Plugins screen', 'pnscripts-tabcrest' ) ); ?>
+						<p class="description"><?php esc_html_e( 'Off by default, so deleting and reinstalling the plugin keeps your tabs. YIKES data is never touched.', 'pnscripts-tabcrest' ); ?></p>
 					</td>
 				</tr>
 			</table>
@@ -351,43 +351,43 @@ final class SettingsPage {
 		$last     = (int) get_option( YikesImporter::LAST_RUN, 0 );
 		?>
 		<div class="pnscripts-pt-import" data-pnscripts-pt-import>
-			<p><?php esc_html_e( 'Copies the tabs of "Custom Product Tabs for WooCommerce" by YIKES: every product\'s tabs (in the same order, with the same content) and the saved tabs, which become global tabs. Products that used a saved tab are linked to the new global tab, so editing it updates them all. Saved tabs that the YIKES Pro add-on assigned to all products or to categories/tags keep those rules.', 'pnscripts-tabwise' ); ?></p>
+			<p><?php esc_html_e( 'Copies the tabs of "Custom Product Tabs for WooCommerce" by YIKES: every product\'s tabs (in the same order, with the same content) and the saved tabs, which become global tabs. Products that used a saved tab are linked to the new global tab, so editing it updates them all. Saved tabs that the YIKES Pro add-on assigned to all products or to categories/tags keep those rules.', 'pnscripts-tabcrest' ); ?></p>
 			<ul class="ul-disc">
-				<li><?php esc_html_e( 'YIKES data is only read. Nothing is changed or deleted, and YIKES keeps working until you deactivate it.', 'pnscripts-tabwise' ); ?></li>
-				<li><?php esc_html_e( 'Running it again is safe: tabs are never duplicated, and products whose YIKES tabs did not change are skipped.', 'pnscripts-tabwise' ); ?></li>
-				<li><?php esc_html_e( 'Tabs YIKES never showed (no title, or hidden by another tab with the same title) are imported switched off and listed below.', 'pnscripts-tabwise' ); ?></li>
-				<li><?php esc_html_e( 'Large catalogues are handled in batches of 100 products. Command line: wp pnscripts-tabwise import-yikes --dry-run', 'pnscripts-tabwise' ); ?></li>
+				<li><?php esc_html_e( 'YIKES data is only read. Nothing is changed or deleted, and YIKES keeps working until you deactivate it.', 'pnscripts-tabcrest' ); ?></li>
+				<li><?php esc_html_e( 'Running it again is safe: tabs are never duplicated, and products whose YIKES tabs did not change are skipped.', 'pnscripts-tabcrest' ); ?></li>
+				<li><?php esc_html_e( 'Tabs YIKES never showed (no title, or hidden by another tab with the same title) are imported switched off and listed below.', 'pnscripts-tabcrest' ); ?></li>
+				<li><?php esc_html_e( 'Large catalogues are handled in batches of 100 products. Command line: wp pnscripts-tabcrest import-yikes --dry-run', 'pnscripts-tabcrest' ); ?></li>
 			</ul>
 			<p>
-				<strong><?php esc_html_e( 'Found:', 'pnscripts-tabwise' ); ?></strong>
+				<strong><?php esc_html_e( 'Found:', 'pnscripts-tabcrest' ); ?></strong>
 				<?php
 				printf(
 					/* translators: %d: number of products */
-					esc_html( _n( '%d product with YIKES tabs', '%d products with YIKES tabs', $products, 'pnscripts-tabwise' ) ),
+					esc_html( _n( '%d product with YIKES tabs', '%d products with YIKES tabs', $products, 'pnscripts-tabcrest' ) ),
 					(int) $products
 				);
 				echo ' · ';
-				echo $active ? esc_html__( 'YIKES plugin active', 'pnscripts-tabwise' ) : esc_html__( 'YIKES plugin not active (data can still be imported)', 'pnscripts-tabwise' );
+				echo $active ? esc_html__( 'YIKES plugin active', 'pnscripts-tabcrest' ) : esc_html__( 'YIKES plugin not active (data can still be imported)', 'pnscripts-tabcrest' );
 				$when = $last > 0 ? wp_date( get_option( 'date_format', 'Y-m-d' ) . ' ' . get_option( 'time_format', 'H:i' ), $last ) : false;
 				if ( is_string( $when ) ) {
 					echo ' · ';
 					printf(
 						/* translators: %s: date and time */
-						esc_html__( 'last import: %s', 'pnscripts-tabwise' ),
+						esc_html__( 'last import: %s', 'pnscripts-tabcrest' ),
 						esc_html( $when )
 					);
 				}
 				?>
 			</p>
 			<p class="pnscripts-pt-import__actions">
-				<button type="button" class="button button-secondary" data-pnscripts-pt-run="dry-run"><?php esc_html_e( 'Dry run (change nothing)', 'pnscripts-tabwise' ); ?></button>
-				<button type="button" class="button button-primary" data-pnscripts-pt-run="import"><?php esc_html_e( 'Import now', 'pnscripts-tabwise' ); ?></button>
-				<button type="button" class="button button-link-delete" data-pnscripts-pt-run="undo"><?php esc_html_e( 'Undo import', 'pnscripts-tabwise' ); ?></button>
+				<button type="button" class="button button-secondary" data-pnscripts-pt-run="dry-run"><?php esc_html_e( 'Dry run (change nothing)', 'pnscripts-tabcrest' ); ?></button>
+				<button type="button" class="button button-primary" data-pnscripts-pt-run="import"><?php esc_html_e( 'Import now', 'pnscripts-tabcrest' ); ?></button>
+				<button type="button" class="button button-link-delete" data-pnscripts-pt-run="undo"><?php esc_html_e( 'Undo import', 'pnscripts-tabcrest' ); ?></button>
 			</p>
 			<p class="pnscripts-pt-import__status" role="status" aria-live="polite" data-pnscripts-pt-status></p>
 			<table class="widefat striped pnscripts-pt-import__report hidden" data-pnscripts-pt-report><tbody></tbody></table>
 			<div class="pnscripts-pt-import__warnings hidden" data-pnscripts-pt-warnings>
-				<h3><?php esc_html_e( 'Notes', 'pnscripts-tabwise' ); ?></h3>
+				<h3><?php esc_html_e( 'Notes', 'pnscripts-tabcrest' ); ?></h3>
 				<ul class="ul-disc"></ul>
 			</div>
 		</div>
@@ -414,11 +414,11 @@ final class SettingsPage {
 		$dismiss = wp_nonce_url( add_query_arg( self::DISMISS_KEY, '1' ), self::DISMISS_KEY );
 		printf(
 			'<div class="notice notice-info"><p>%1$s</p><p><a class="button button-primary" href="%2$s">%3$s</a> <a class="button-link" href="%4$s">%5$s</a></p></div>',
-			esc_html__( 'PN Scripts Tabwise found tabs from Custom Product Tabs for WooCommerce (YIKES). Import them in one click; YIKES data stays untouched.', 'pnscripts-tabwise' ),
+			esc_html__( 'PN Scripts Tabcrest found tabs from Custom Product Tabs for WooCommerce (YIKES). Import them in one click; YIKES data stays untouched.', 'pnscripts-tabcrest' ),
 			esc_url( self::url( 'import' ) ),
-			esc_html__( 'Review the import', 'pnscripts-tabwise' ),
+			esc_html__( 'Review the import', 'pnscripts-tabcrest' ),
 			esc_url( $dismiss ),
-			esc_html__( 'Dismiss', 'pnscripts-tabwise' )
+			esc_html__( 'Dismiss', 'pnscripts-tabcrest' )
 		);
 	}
 

@@ -41,6 +41,6 @@ require $root . '/vendor/autoload.php';
 require $wp_dir . '/wp-load.php';
 
 if ( ! class_exists( \Pnscripts\ProductTabs\Plugin::class ) || null === \Pnscripts\ProductTabs\Plugin::instance() ) {
-	fwrite( STDERR, "PN Scripts Tabwise is not active on the test site.\n" );
+	fwrite( STDERR, "PN Scripts Tabcrest is not active on the test site.\n" );
 	exit( 1 );
 }

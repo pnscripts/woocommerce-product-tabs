@@ -10,7 +10,7 @@
 
 Please report security issues privately through GitHub's **private vulnerability reporting** for this
 repository: open the **Security** tab and choose **Report a vulnerability**
-(https://github.com/pnscripts/woocommerce-product-tabs/security/advisories/new). Do not open a public issue or
+(https://github.com/pnscripts/pnscripts-tabcrest/security/advisories/new). Do not open a public issue or
 post in the WordPress.org support forum.
 
 Include the plugin version, WordPress and WooCommerce versions, the steps to reproduce and the impact. We

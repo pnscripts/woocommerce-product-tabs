@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Bundled translations (bg_BG, de_DE, pl_PL) for PN Scripts Tabwise.
+"""Bundled translations (bg_BG, de_DE, pl_PL) for PN Scripts Tabcrest.
 
-Regenerates languages/pnscripts-tabwise-<locale>.po from the .pot; untranslated strings stay empty
+Regenerates languages/pnscripts-tabcrest-<locale>.po from the .pot; untranslated strings stay empty
 (WordPress falls back to English). Run bin/i18n/update.sh, which also builds the .mo files.
 """
 import re
@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 T = {
-    "PN Scripts Tabwise – Custom Product Tabs & FAQ": ("PN Scripts Tabwise – Custom Product Tabs & FAQ", "PN Scripts Tabwise – Custom Product Tabs & FAQ", "PN Scripts Tabwise – Custom Product Tabs & FAQ"),
+    "PN Scripts Tabcrest – Custom Product Tabs & FAQ": ("PN Scripts Tabcrest – Custom Product Tabs & FAQ", "PN Scripts Tabcrest – Custom Product Tabs & FAQ", "PN Scripts Tabcrest – Custom Product Tabs & FAQ"),
     "Custom product tabs per product, reusable global tabs by category or tag, FAQ tabs with optional FAQPage schema, rename, reorder or hide the default tabs, and a one-click importer from YIKES Custom Product Tabs. Works in classic and block themes.": (
         "Собствени раздели за всеки продукт, глобални раздели за категории или етикети, раздели с ЧЗВ и FAQPage schema, преименуване, подреждане и скриване на стандартните раздели и импорт с едно кликване от YIKES Custom Product Tabs. Работи с класически и блокови теми.",
         "Eigene Produkt-Tabs pro Produkt, wiederverwendbare globale Tabs nach Kategorie oder Schlagwort, FAQ-Tabs mit optionalem FAQPage-Schema, Umbenennen, Sortieren oder Ausblenden der Standard-Tabs und ein Ein-Klick-Import aus YIKES Custom Product Tabs. Funktioniert mit klassischen und Block-Themes.",
@@ -133,7 +133,7 @@ T = {
     "YIKES data is only read. Nothing is changed or deleted, and YIKES keeps working until you deactivate it.": ("Данните на YIKES само се четат. Нищо не се променя или изтрива и YIKES продължава да работи, докато не го деактивирате.", "YIKES-Daten werden nur gelesen. Nichts wird geändert oder gelöscht, und YIKES funktioniert weiter, bis Sie es deaktivieren.", "Dane YIKES są tylko odczytywane. Nic nie jest zmieniane ani usuwane, a YIKES działa, dopóki go nie dezaktywujesz."),
     "Running it again is safe: tabs are never duplicated, and products whose YIKES tabs did not change are skipped.": ("Повторното изпълнение е безопасно: разделите не се дублират, а продуктите без промени в YIKES се пропускат.", "Ein erneuter Lauf ist sicher: Tabs werden nie doppelt angelegt, und Produkte mit unveränderten YIKES-Tabs werden übersprungen.", "Ponowne uruchomienie jest bezpieczne: zakładki nigdy się nie dublują, a produkty bez zmian w YIKES są pomijane."),
     "Tabs YIKES never showed (no title, or hidden by another tab with the same title) are imported switched off and listed below.": ("Разделите, които YIKES никога не е показвал (без заглавие или скрити от друг раздел със същото заглавие), се импортират изключени и са изброени по-долу.", "Tabs, die YIKES nie angezeigt hat (ohne Titel oder durch einen anderen Tab mit gleichem Titel verdeckt), werden deaktiviert importiert und unten aufgelistet.", "Zakładki, których YIKES nigdy nie pokazywał (bez tytułu lub ukryte przez inną zakładkę o tym samym tytule), są importowane jako wyłączone i wymienione poniżej."),
-    "Large catalogues are handled in batches of 100 products. Command line: wp pnscripts-tabwise import-yikes --dry-run": ("Големите каталози се обработват на партиди по 100 продукта. Команден ред: wp pnscripts-tabwise import-yikes --dry-run", "Große Kataloge werden in Paketen zu 100 Produkten verarbeitet. Kommandozeile: wp pnscripts-tabwise import-yikes --dry-run", "Duże katalogi są przetwarzane partiami po 100 produktów. Wiersz poleceń: wp pnscripts-tabwise import-yikes --dry-run"),
+    "Large catalogues are handled in batches of 100 products. Command line: wp pnscripts-tabcrest import-yikes --dry-run": ("Големите каталози се обработват на партиди по 100 продукта. Команден ред: wp pnscripts-tabcrest import-yikes --dry-run", "Große Kataloge werden in Paketen zu 100 Produkten verarbeitet. Kommandozeile: wp pnscripts-tabcrest import-yikes --dry-run", "Duże katalogi są przetwarzane partiami po 100 produktów. Wiersz poleceń: wp pnscripts-tabcrest import-yikes --dry-run"),
     "Found:": ("Намерени:", "Gefunden:", "Znaleziono:"),
     "YIKES plugin active": ("разширението YIKES е активно", "YIKES-Plugin aktiv", "wtyczka YIKES aktywna"),
     "YIKES plugin not active (data can still be imported)": ("разширението YIKES не е активно (данните пак могат да се импортират)", "YIKES-Plugin nicht aktiv (Daten können trotzdem importiert werden)", "wtyczka YIKES nieaktywna (dane nadal można zaimportować)"),
@@ -142,14 +142,14 @@ T = {
     "Import now": ("Импортирай сега", "Jetzt importieren", "Importuj teraz"),
     "Undo import": ("Отмени импорта", "Import rückgängig machen", "Cofnij import"),
     "Notes": ("Бележки", "Hinweise", "Uwagi"),
-    "PN Scripts Tabwise found tabs from Custom Product Tabs for WooCommerce (YIKES). Import them in one click; YIKES data stays untouched.": ("PN Scripts Tabwise откри раздели от Custom Product Tabs for WooCommerce (YIKES). Импортирайте ги с едно кликване; данните на YIKES остават непокътнати.", "PN Scripts Tabwise hat Tabs aus Custom Product Tabs for WooCommerce (YIKES) gefunden. Importieren Sie sie mit einem Klick; die YIKES-Daten bleiben unverändert.", "PN Scripts Tabwise znalazł zakładki z Custom Product Tabs for WooCommerce (YIKES). Zaimportuj je jednym kliknięciem; dane YIKES pozostaną nietknięte."),
+    "PN Scripts Tabcrest found tabs from Custom Product Tabs for WooCommerce (YIKES). Import them in one click; YIKES data stays untouched.": ("PN Scripts Tabcrest откри раздели от Custom Product Tabs for WooCommerce (YIKES). Импортирайте ги с едно кликване; данните на YIKES остават непокътнати.", "PN Scripts Tabcrest hat Tabs aus Custom Product Tabs for WooCommerce (YIKES) gefunden. Importieren Sie sie mit einem Klick; die YIKES-Daten bleiben unverändert.", "PN Scripts Tabcrest znalazł zakładki z Custom Product Tabs for WooCommerce (YIKES). Zaimportuj je jednym kliknięciem; dane YIKES pozostaną nietknięte."),
     "Review the import": ("Прегледай импорта", "Import prüfen", "Sprawdź import"),
     "Dismiss": ("Скрий", "Ausblenden", "Odrzuć"),
     "Saved tab #%d has no title and was skipped.": ("Запазеният раздел №%d няма заглавие и е пропуснат.", "Gespeicherter Tab #%d hat keinen Titel und wurde übersprungen.", "Zapisana zakładka #%d nie ma tytułu i została pominięta."),
     "Saved tab \"%1$s\" was assigned by the taxonomy \"%2$s\", which is not supported; it is imported for the categories and tags only.": ("Запазеният раздел „%1$s“ е бил зададен по таксономията „%2$s“, която не се поддържа; импортира се само за категориите и етикетите.", "Der gespeicherte Tab „%1$s“ wurde über die Taxonomie „%2$s“ zugewiesen, die nicht unterstützt wird; er wird nur für die Kategorien und Schlagwörter importiert.", "Zapisana zakładka „%1$s” była przypisana według taksonomii „%2$s”, która nie jest obsługiwana; importowana jest tylko dla kategorii i tagów."),
     "Product #%d: a tab without a title (never shown by YIKES) was imported switched off.": ("Продукт №%d: раздел без заглавие (никога не показван от YIKES) е импортиран изключен.", "Produkt #%d: Ein Tab ohne Titel (von YIKES nie angezeigt) wurde deaktiviert importiert.", "Produkt #%d: zakładka bez tytułu (nigdy niepokazywana przez YIKES) została zaimportowana jako wyłączona."),
     "Product #%1$d: the tab \"%2$s\" was hidden by a later tab with the same title in YIKES; it was imported switched off.": ("Продукт №%1$d: разделът „%2$s“ е бил скрит от по-късен раздел със същото заглавие в YIKES; импортиран е изключен.", "Produkt #%1$d: Der Tab „%2$s“ wurde in YIKES durch einen späteren Tab mit gleichem Titel verdeckt; er wurde deaktiviert importiert.", "Produkt #%1$d: zakładka „%2$s” była ukryta przez późniejszą zakładkę o tym samym tytule w YIKES; zaimportowano ją jako wyłączoną."),
-    "PN Scripts Tabwise needs WooCommerce %s or newer to be active.": ("PN Scripts Tabwise изисква активен WooCommerce %s или по-нов.", "PN Scripts Tabwise benötigt ein aktives WooCommerce %s oder neuer.", "PN Scripts Tabwise wymaga aktywnego WooCommerce w wersji %s lub nowszej."),
+    "PN Scripts Tabcrest needs WooCommerce %s or newer to be active.": ("PN Scripts Tabcrest изисква активен WooCommerce %s или по-нов.", "PN Scripts Tabcrest benötigt ein aktives WooCommerce %s oder neuer.", "PN Scripts Tabcrest wymaga aktywnego WooCommerce w wersji %s lub nowszej."),
     "Sorry, you are not allowed to view global product tabs.": ("Нямате права да преглеждате глобалните продуктови раздели.", "Sie dürfen globale Produkt-Tabs nicht ansehen.", "Nie masz uprawnień do przeglądania globalnych zakładek produktów."),
     "Global product tabs": ("Глобални продуктови раздели", "Globale Produkt-Tabs", "Globalne zakładki produktów"),
     "Global product tab": ("Глобален продуктов раздел", "Globaler Produkt-Tab", "Globalna zakładka produktu"),
@@ -162,7 +162,7 @@ T = {
     "Global tab updated.": ("Глобалният раздел е обновен.", "Globaler Tab aktualisiert.", "Globalna zakładka zaktualizowana."),
     "Global tab published.": ("Глобалният раздел е публикуван.", "Globaler Tab veröffentlicht.", "Globalna zakładka opublikowana."),
     "Reusable tabs shown on all products, on products in chosen categories or tags, or where added manually.": ("Раздели за многократна употреба, показвани на всички продукти, на продукти в избрани категории или етикети, или там, където са добавени ръчно.", "Wiederverwendbare Tabs für alle Produkte, für Produkte in gewählten Kategorien oder Schlagwörtern oder dort, wo sie manuell hinzugefügt wurden.", "Zakładki wielokrotnego użytku wyświetlane na wszystkich produktach, w wybranych kategoriach lub tagach albo tam, gdzie dodano je ręcznie."),
-    "https://pnscripts.com/marketplace/pn-product-tabs": ("https://pnscripts.com/marketplace/pn-product-tabs",) * 3,
+    "https://pnscripts.com/marketplace/pnscripts-tabcrest": ("https://pnscripts.com/marketplace/pnscripts-tabcrest",) * 3,
     "https://pnscripts.com": ("https://pnscripts.com",) * 3,
 }
 
@@ -190,7 +190,7 @@ def unq(block):
 
 
 def main(root):
-    pot = (root / "languages" / "pnscripts-tabwise.pot").read_text(encoding="utf-8")
+    pot = (root / "languages" / "pnscripts-tabcrest.pot").read_text(encoding="utf-8")
     header, _, body = pot.partition("\n\n")
     entries = body.split("\n\n")
     for locale, (i, name, plural_forms) in LOCALES.items():
@@ -228,7 +228,7 @@ def main(root):
                 continue
             e = re.sub(r'msgstr ""\s*$', f'msgstr "{esc(tr[i])}"', e.rstrip())
             out.append(e)
-        (root / "languages" / f"pnscripts-tabwise-{locale}.po").write_text("\n\n".join(out) + "\n", encoding="utf-8")
+        (root / "languages" / f"pnscripts-tabcrest-{locale}.po").write_text("\n\n".join(out) + "\n", encoding="utf-8")
         print(f"{locale}: {missing} untranslated")
 
 

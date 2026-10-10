@@ -2,594 +2,597 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: PN Scripts Tabwise 1.0.3\n"
-"Report-Msgid-Bugs-To: https://github.com/pnscripts/woocommerce-product-tabs/issues\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: PN Scripts Tabcrest 1.0.4\n"
+"Report-Msgid-Bugs-To: https://github.com/pnscripts/pnscripts-tabcrest/issues\n"
+"Last-Translator: PN Scripts <https://pnscripts.com>\n"
+"Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-06T08:16:09+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2026-10-10T09:39:11+00:00\n"
+"PO-Revision-Date: 2026-10-04 00:00+0000\n"
 "X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: pnscripts-tabwise\n"
+"X-Domain: pnscripts-tabcrest\n"
+"Language: pl_PL\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. Plugin Name of the plugin
-#: pnscripts-tabwise.php
-msgid "PN Scripts Tabwise – Custom Product Tabs & FAQ"
-msgstr ""
+#: pnscripts-tabcrest.php
+msgid "PN Scripts Tabcrest – Custom Product Tabs & FAQ"
+msgstr "PN Scripts Tabcrest – Custom Product Tabs & FAQ"
 
 #. Plugin URI of the plugin
-#: pnscripts-tabwise.php
-msgid "https://pnscripts.com/marketplace/pn-product-tabs"
-msgstr ""
+#: pnscripts-tabcrest.php
+msgid "https://pnscripts.com/marketplace/pnscripts-tabcrest"
+msgstr "https://pnscripts.com/marketplace/pnscripts-tabcrest"
 
 #. Description of the plugin
-#: pnscripts-tabwise.php
+#: pnscripts-tabcrest.php
 msgid "Custom product tabs per product, reusable global tabs by category or tag, FAQ tabs with optional FAQPage schema, rename, reorder or hide the default tabs, and a one-click importer from YIKES Custom Product Tabs. Works in classic and block themes."
-msgstr ""
+msgstr "Własne zakładki dla każdego produktu, globalne zakładki według kategorii lub tagów, zakładki FAQ z opcjonalnym schematem FAQPage, zmiana nazwy, kolejności lub ukrywanie domyślnych zakładek oraz import jednym kliknięciem z YIKES Custom Product Tabs. Działa z motywami klasycznymi i blokowymi."
 
 #. Author of the plugin
-#: pnscripts-tabwise.php
+#: pnscripts-tabcrest.php
 msgid "PN Scripts"
-msgstr ""
+msgstr "PN Scripts"
 
 #. Author URI of the plugin
-#: pnscripts-tabwise.php
+#: pnscripts-tabcrest.php
 msgid "https://pnscripts.com"
-msgstr ""
+msgstr "https://pnscripts.com"
 
 #: src/Admin/GlobalTabMetaBox.php:49
 #: src/Admin/SettingsPage.php:65
 msgid "Tab settings"
-msgstr ""
+msgstr "Ustawienia zakładek"
 
 #: src/Admin/GlobalTabMetaBox.php:87
 msgid "Tab type"
-msgstr ""
+msgstr "Typ zakładki"
 
 #: src/Admin/GlobalTabMetaBox.php:88
 msgid "Rich text: the content written in the editor above"
-msgstr ""
+msgstr "Tekst: treść wpisana w edytorze powyżej"
 
 #: src/Admin/GlobalTabMetaBox.php:89
 msgid "FAQ: questions and answers below"
-msgstr ""
+msgstr "FAQ: pytania i odpowiedzi poniżej"
 
 #: src/Admin/GlobalTabMetaBox.php:107
 #: src/Admin/ProductPanel.php:279
 msgid "Add question"
-msgstr ""
+msgstr "Dodaj pytanie"
 
 #: src/Admin/GlobalTabMetaBox.php:111
 #: src/Admin/ProductPanel.php:283
 msgid "Publish as FAQPage structured data"
-msgstr ""
+msgstr "Publikuj jako dane strukturalne FAQPage"
 
 #: src/Admin/GlobalTabMetaBox.php:128
 msgid "Show this tab on"
-msgstr ""
+msgstr "Pokazuj tę zakładkę na"
 
 #: src/Admin/GlobalTabMetaBox.php:129
 #: src/Admin/GlobalTabMetaBox.php:325
 msgid "All products"
-msgstr ""
+msgstr "Wszystkich produktach"
 
 #: src/Admin/GlobalTabMetaBox.php:130
 msgid "Products in these categories or with these tags"
-msgstr ""
+msgstr "Produktach z tych kategorii lub z tymi tagami"
 
 #: src/Admin/GlobalTabMetaBox.php:131
 msgid "Only products where I add it (Product data → Custom tabs)"
-msgstr ""
+msgstr "Tylko produktach, do których go dodam (Dane produktu → Własne zakładki)"
 
 #: src/Admin/GlobalTabMetaBox.php:136
 msgid "Categories (subcategories included)"
-msgstr ""
+msgstr "Kategorie (łącznie z podkategoriami)"
 
 #: src/Admin/GlobalTabMetaBox.php:137
 msgid "Choose categories…"
-msgstr ""
+msgstr "Wybierz kategorie…"
 
 #: src/Admin/GlobalTabMetaBox.php:142
 msgid "Tags"
-msgstr ""
+msgstr "Tagi"
 
 #: src/Admin/GlobalTabMetaBox.php:143
 msgid "Choose tags…"
-msgstr ""
+msgstr "Wybierz tagi…"
 
 #: src/Admin/GlobalTabMetaBox.php:150
 msgid "Position (priority)"
-msgstr ""
+msgstr "Pozycja (priorytet)"
 
 #: src/Admin/GlobalTabMetaBox.php:152
 msgid "Lower numbers come first. WooCommerce uses 10 for Description, 20 for Additional information and 30 for Reviews (change these under Products → Tab settings)."
-msgstr ""
+msgstr "Niższe liczby są pierwsze. WooCommerce używa 10 dla Opisu, 20 dla Informacji dodatkowych i 30 dla Opinii (zmienisz to w Produkty → Ustawienia zakładek)."
 
 #: src/Admin/GlobalTabMetaBox.php:219
 #: src/Admin/ProductPanel.php:308
 msgid "Question"
-msgstr ""
+msgstr "Pytanie"
 
 #: src/Admin/GlobalTabMetaBox.php:223
 #: src/Admin/ProductPanel.php:312
 msgid "Answer"
-msgstr ""
+msgstr "Odpowiedź"
 
 #: src/Admin/GlobalTabMetaBox.php:225
 #: src/Admin/ProductPanel.php:314
 msgid "Remove question"
-msgstr ""
+msgstr "Usuń pytanie"
 
 #: src/Admin/GlobalTabMetaBox.php:286
 msgid "Shown on"
-msgstr ""
+msgstr "Wyświetlana na"
 
 #: src/Admin/GlobalTabMetaBox.php:287
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 #: src/Admin/GlobalTabMetaBox.php:288
 #: src/Admin/SettingsPage.php:272
 #: src/Admin/SettingsPage.php:289
 msgid "Priority"
-msgstr ""
+msgstr "Priorytet"
 
 #: src/Admin/GlobalTabMetaBox.php:310
 #: src/Admin/ProductPanel.php:232
 msgid "FAQ"
-msgstr ""
+msgstr "FAQ"
 
 #: src/Admin/GlobalTabMetaBox.php:310
 #: src/Admin/ProductPanel.php:231
 msgid "Rich text"
-msgstr ""
+msgstr "Tekst"
 
 #: src/Admin/GlobalTabMetaBox.php:328
 msgid "Products where added"
-msgstr ""
+msgstr "Produkty, do których ją dodano"
 
 #: src/Admin/GlobalTabMetaBox.php:337
 msgid "No categories or tags chosen"
-msgstr ""
+msgstr "Nie wybrano kategorii ani tagów"
 
 #: src/Admin/ProductPanel.php:62
 #: src/Admin/SettingsPage.php:296
 msgid "Custom tabs"
-msgstr ""
+msgstr "Własne zakładki"
 
 #: src/Admin/ProductPanel.php:90
 msgid "Remove this tab? It is deleted when you update the product."
-msgstr ""
+msgstr "Usunąć tę zakładkę? Zostanie usunięta po zaktualizowaniu produktu."
 
 #: src/Admin/ProductPanel.php:91
 #: src/Admin/ProductPanel.php:240
 msgid "(no title)"
-msgstr ""
+msgstr "(bez tytułu)"
 
 #: src/Admin/ProductPanel.php:122
 msgid "Tabs shown on this product, in this order (drag to reorder). Rich-text tabs accept anything the editor does; FAQ tabs show questions as an accessible list and can publish FAQPage structured data."
-msgstr ""
+msgstr "Zakładki tego produktu w tej kolejności (przeciągnij, aby zmienić). Zakładki tekstowe przyjmują wszystko, co obsługuje edytor; zakładki FAQ pokazują pytania jako dostępną listę i mogą publikować dane strukturalne FAQPage."
 
 #: src/Admin/ProductPanel.php:130
 msgid "No custom tabs on this product yet."
-msgstr ""
+msgstr "Ten produkt nie ma jeszcze własnych zakładek."
 
 #: src/Admin/ProductPanel.php:132
 msgid "Add tab"
-msgstr ""
+msgstr "Dodaj zakładkę"
 
 #: src/Admin/ProductPanel.php:133
 msgid "Add FAQ tab"
-msgstr ""
+msgstr "Dodaj zakładkę FAQ"
 
 #: src/Admin/ProductPanel.php:135
 msgid "Global tab to add"
-msgstr ""
+msgstr "Globalna zakładka do dodania"
 
 #: src/Admin/ProductPanel.php:137
 msgid "Add a global tab…"
-msgstr ""
+msgstr "Dodaj globalną zakładkę…"
 
 #: src/Admin/ProductPanel.php:142
 msgid "Add"
-msgstr ""
+msgstr "Dodaj"
 
 #: src/Admin/ProductPanel.php:144
 msgid "Manage global tabs"
-msgstr ""
+msgstr "Zarządzaj globalnymi zakładkami"
 
 #: src/Admin/ProductPanel.php:161
 msgid "Global tabs shown automatically"
-msgstr ""
+msgstr "Globalne zakładki wyświetlane automatycznie"
 
 #. translators: %s: tab title
 #: src/Admin/ProductPanel.php:169
 #: src/Admin/ProductPanel.php:190
 #, php-format
 msgid "Hide \"%s\" on this product"
-msgstr ""
+msgstr "Ukryj „%s” na tym produkcie"
 
 #: src/Admin/ProductPanel.php:180
 msgid "WooCommerce tabs on this product"
-msgstr ""
+msgstr "Zakładki WooCommerce w tym produkcie"
 
 #: src/Admin/ProductPanel.php:229
 msgid "(deleted global tab)"
-msgstr ""
+msgstr "(usunięta zakładka globalna)"
 
 #: src/Admin/ProductPanel.php:233
 msgid "Global"
-msgstr ""
+msgstr "Globalna"
 
 #: src/Admin/ProductPanel.php:238
 msgid "Drag to reorder"
-msgstr ""
+msgstr "Przeciągnij, aby zmienić kolejność"
 
 #: src/Admin/ProductPanel.php:243
 msgid "Imported"
-msgstr ""
+msgstr "Zaimportowana"
 
 #: src/Admin/ProductPanel.php:249
 #: src/Admin/SettingsPage.php:270
 #: src/Admin/SettingsPage.php:283
 msgid "Show"
-msgstr ""
+msgstr "Pokazuj"
 
 #: src/Admin/ProductPanel.php:251
 msgid "Remove"
-msgstr ""
+msgstr "Usuń"
 
 #: src/Admin/ProductPanel.php:260
 msgid "Content comes from the global tab and updates everywhere when you edit it."
-msgstr ""
+msgstr "Treść pochodzi z globalnej zakładki i aktualizuje się wszędzie, gdy ją edytujesz."
 
 #: src/Admin/ProductPanel.php:262
 #: src/Storage/GlobalTabs.php:74
 msgid "Edit global tab"
-msgstr ""
+msgstr "Edytuj globalną zakładkę"
 
 #: src/Admin/ProductPanel.php:267
 msgid "Tab title"
-msgstr ""
+msgstr "Tytuł zakładki"
 
 #: src/Admin/ProductPanel.php:288
 msgid "Tab content"
-msgstr ""
+msgstr "Treść zakładki"
 
 #: src/Admin/ProductPanel.php:392
 msgid "Description"
-msgstr ""
+msgstr "Opis"
 
 #: src/Admin/ProductPanel.php:393
 msgid "Additional information"
-msgstr ""
+msgstr "Informacje dodatkowe"
 
 #: src/Admin/ProductPanel.php:394
 msgid "Reviews"
-msgstr ""
+msgstr "Opinie"
 
 #: src/Admin/SettingsPage.php:64
 #: src/Admin/SettingsPage.php:228
 msgid "Product tab settings"
-msgstr ""
+msgstr "Ustawienia zakładek produktu"
 
 #: src/Admin/SettingsPage.php:123
 #: src/Admin/SettingsPage.php:230
 msgid "Settings"
-msgstr ""
+msgstr "Ustawienia"
 
 #: src/Admin/SettingsPage.php:124
 #: src/Admin/SettingsPage.php:231
 msgid "Global tabs"
-msgstr ""
+msgstr "Globalne zakładki"
 
 #: src/Admin/SettingsPage.php:163
 msgid "Import the YIKES tabs now? YIKES data is not changed and you can undo the import."
-msgstr ""
+msgstr "Zaimportować teraz zakładki YIKES? Dane YIKES nie są zmieniane, a import można cofnąć."
 
 #: src/Admin/SettingsPage.php:164
 msgid "Remove all tabs created by the import (tabs you added yourself stay)?"
-msgstr ""
+msgstr "Usunąć wszystkie zakładki utworzone przez import (dodane przez Ciebie zostaną)?"
 
 #. translators: %d: number of products handled so far
 #: src/Admin/SettingsPage.php:166
 #, php-format
 msgid "Working… %d products handled"
-msgstr ""
+msgstr "Trwa praca… przetworzono produktów: %d"
 
 #: src/Admin/SettingsPage.php:167
 msgid "The request failed. Reload the page and try again."
-msgstr ""
+msgstr "Żądanie nie powiodło się. Odśwież stronę i spróbuj ponownie."
 
 #: src/Admin/SettingsPage.php:168
 msgid "Dry run finished: nothing was changed. These numbers are what an import will do."
-msgstr ""
+msgstr "Próba zakończona: nic nie zostało zmienione. Te liczby pokazują, co zrobi import."
 
 #: src/Admin/SettingsPage.php:169
 msgid "Import finished. Check a few product pages, then deactivate YIKES Custom Product Tabs."
-msgstr ""
+msgstr "Import zakończony. Sprawdź kilka stron produktów, a potem dezaktywuj YIKES Custom Product Tabs."
 
 #: src/Admin/SettingsPage.php:170
 msgid "Import removed."
-msgstr ""
+msgstr "Import usunięty."
 
 #. translators: %d: number of further notes
 #: src/Admin/SettingsPage.php:172
 #, php-format
 msgid "… and %d more notes like these."
-msgstr ""
+msgstr "… i jeszcze %d podobnych uwag."
 
 #: src/Admin/SettingsPage.php:185
 msgid "Products with YIKES tabs"
-msgstr ""
+msgstr "Produkty z zakładkami YIKES"
 
 #: src/Admin/SettingsPage.php:186
 msgid "YIKES saved tabs"
-msgstr ""
+msgstr "Zapisane zakładki YIKES"
 
 #: src/Admin/SettingsPage.php:187
 msgid "Global tabs to create / created"
-msgstr ""
+msgstr "Globalne zakładki do utworzenia / utworzone"
 
 #: src/Admin/SettingsPage.php:188
 msgid "Saved tabs imported before (left as they are)"
-msgstr ""
+msgstr "Zapisane zakładki zaimportowane wcześniej (bez zmian)"
 
 #: src/Admin/SettingsPage.php:189
 msgid "Products to import / imported"
-msgstr ""
+msgstr "Produkty do importu / zaimportowane"
 
 #: src/Admin/SettingsPage.php:190
 msgid "Products unchanged since the last import (skipped)"
-msgstr ""
+msgstr "Produkty bez zmian od ostatniego importu (pominięte)"
 
 #: src/Admin/SettingsPage.php:191
 msgid "Product tabs copied"
-msgstr ""
+msgstr "Skopiowane zakładki produktów"
 
 #: src/Admin/SettingsPage.php:192
 msgid "Product tabs linked to a global tab"
-msgstr ""
+msgstr "Zakładki produktów powiązane z globalną zakładką"
 
 #: src/Admin/SettingsPage.php:193
 msgid "Tabs without a title (imported switched off)"
-msgstr ""
+msgstr "Zakładki bez tytułu (zaimportowane jako wyłączone)"
 
 #: src/Admin/SettingsPage.php:194
 msgid "Tabs hidden by a duplicate title in YIKES (imported switched off)"
-msgstr ""
+msgstr "Zakładki ukryte przez powtórzony tytuł w YIKES (zaimportowane jako wyłączone)"
 
 #: src/Admin/SettingsPage.php:195
 msgid "Default tabs YIKES replaced (hidden on those products)"
-msgstr ""
+msgstr "Domyślne zakładki zastąpione przez YIKES (ukryte w tych produktach)"
 
 #: src/Admin/SettingsPage.php:196
 msgid "Imported global tabs removed"
-msgstr ""
+msgstr "Usunięte zaimportowane zakładki globalne"
 
 #: src/Admin/SettingsPage.php:197
 msgid "Products cleaned"
-msgstr ""
+msgstr "Wyczyszczone produkty"
 
 #: src/Admin/SettingsPage.php:207
 msgid "You are not allowed to import tabs."
-msgstr ""
+msgstr "Nie masz uprawnień do importu zakładek."
 
 #: src/Admin/SettingsPage.php:232
 msgid "Import from YIKES"
-msgstr ""
+msgstr "Import z YIKES"
 
 #: src/Admin/SettingsPage.php:256
 msgid "WooCommerce tabs"
-msgstr ""
+msgstr "Zakładki WooCommerce"
 
 #. translators: %s: the literal placeholder "%d" that merchants type into the Reviews title
 #: src/Admin/SettingsPage.php:261
 #, php-format
 msgid "Rename, reorder or hide the standard tabs on every product (single products can hide them too, under Product data → Custom tabs). Leave a title empty to keep WooCommerce's title; in the Reviews title, %s becomes the number of reviews."
-msgstr ""
+msgstr "Zmień nazwę, kolejność lub ukryj standardowe zakładki we wszystkich produktach (pojedyncze produkty też mogą je ukryć w Dane produktu → Własne zakładki). Zostaw pusty tytuł, aby zachować tytuł WooCommerce; w tytule Opinii %s zamienia się w liczbę opinii."
 
 #: src/Admin/SettingsPage.php:269
 msgid "Tab"
-msgstr ""
+msgstr "Zakładka"
 
 #: src/Admin/SettingsPage.php:271
 #: src/Admin/SettingsPage.php:286
 msgid "Title"
-msgstr ""
+msgstr "Tytuł"
 
 #: src/Admin/SettingsPage.php:299
 msgid "Priority of product tabs"
-msgstr ""
+msgstr "Priorytet zakładek produktu"
 
 #: src/Admin/SettingsPage.php:302
 msgid "The first tab added on a product gets this priority, the next one +1, and so on. 25 places them between Additional information and Reviews. Global tabs have their own priority."
-msgstr ""
+msgstr "Pierwsza zakładka produktu otrzymuje ten priorytet, następna +1 itd. 25 umieszcza je między Informacjami dodatkowymi a Opiniami. Zakładki globalne mają własny priorytet."
 
 #: src/Admin/SettingsPage.php:306
 msgid "Display"
-msgstr ""
+msgstr "Wyświetlanie"
 
 #: src/Admin/SettingsPage.php:309
 msgid "Keep Reviews as the last tab"
-msgstr ""
+msgstr "Opinie zawsze jako ostatnia zakładka"
 
 #: src/Admin/SettingsPage.php:310
 msgid "Repeat the tab title as a heading inside the tab (classic tabs; never inside accordions)"
-msgstr ""
+msgstr "Powtarzaj tytuł jako nagłówek w zakładce (klasyczne zakładki; nigdy w akordeonach)"
 
 #: src/Admin/SettingsPage.php:311
 msgid "Output FAQPage structured data for FAQ tabs that allow it (turn off if your SEO plugin already adds FAQ markup)"
-msgstr ""
+msgstr "Wyświetlaj dane strukturalne FAQPage dla zakładek FAQ, które na to pozwalają (wyłącz, jeśli wtyczka SEO już dodaje znaczniki FAQ)"
 
 #: src/Admin/SettingsPage.php:312
 msgid "While YIKES Custom Product Tabs is still active, hide its copy of tabs that were imported"
-msgstr ""
+msgstr "Dopóki YIKES Custom Product Tabs jest aktywny, ukrywaj jego kopie zaimportowanych zakładek"
 
 #: src/Admin/SettingsPage.php:317
 msgid "Uninstall"
-msgstr ""
+msgstr "Odinstalowanie"
 
 #: src/Admin/SettingsPage.php:319
 msgid "Delete all tabs and settings of this plugin when it is deleted from the Plugins screen"
-msgstr ""
+msgstr "Usuń wszystkie zakładki i ustawienia tej wtyczki, gdy zostanie usunięta z ekranu Wtyczki"
 
 #: src/Admin/SettingsPage.php:320
 msgid "Off by default, so deleting and reinstalling the plugin keeps your tabs. YIKES data is never touched."
-msgstr ""
+msgstr "Domyślnie wyłączone, więc usunięcie i ponowna instalacja zachowa zakładki. Dane YIKES nigdy nie są zmieniane."
 
 #: src/Admin/SettingsPage.php:354
 msgid "Copies the tabs of \"Custom Product Tabs for WooCommerce\" by YIKES: every product's tabs (in the same order, with the same content) and the saved tabs, which become global tabs. Products that used a saved tab are linked to the new global tab, so editing it updates them all. Saved tabs that the YIKES Pro add-on assigned to all products or to categories/tags keep those rules."
-msgstr ""
+msgstr "Kopiuje zakładki „Custom Product Tabs for WooCommerce” od YIKES: zakładki każdego produktu (w tej samej kolejności, z tą samą treścią) oraz zapisane zakładki, które stają się globalne. Produkty, które używały zapisanej zakładki, zostają z nią powiązane, więc jej edycja aktualizuje wszystkie. Zapisane zakładki, które dodatek YIKES Pro przypisał do wszystkich produktów lub do kategorii/tagów, zachowują te reguły."
 
 #: src/Admin/SettingsPage.php:356
 msgid "YIKES data is only read. Nothing is changed or deleted, and YIKES keeps working until you deactivate it."
-msgstr ""
+msgstr "Dane YIKES są tylko odczytywane. Nic nie jest zmieniane ani usuwane, a YIKES działa, dopóki go nie dezaktywujesz."
 
 #: src/Admin/SettingsPage.php:357
 msgid "Running it again is safe: tabs are never duplicated, and products whose YIKES tabs did not change are skipped."
-msgstr ""
+msgstr "Ponowne uruchomienie jest bezpieczne: zakładki nigdy się nie dublują, a produkty bez zmian w YIKES są pomijane."
 
 #: src/Admin/SettingsPage.php:358
 msgid "Tabs YIKES never showed (no title, or hidden by another tab with the same title) are imported switched off and listed below."
-msgstr ""
+msgstr "Zakładki, których YIKES nigdy nie pokazywał (bez tytułu lub ukryte przez inną zakładkę o tym samym tytule), są importowane jako wyłączone i wymienione poniżej."
 
 #: src/Admin/SettingsPage.php:359
-msgid "Large catalogues are handled in batches of 100 products. Command line: wp pnscripts-tabwise import-yikes --dry-run"
-msgstr ""
+msgid "Large catalogues are handled in batches of 100 products. Command line: wp pnscripts-tabcrest import-yikes --dry-run"
+msgstr "Duże katalogi są przetwarzane partiami po 100 produktów. Wiersz poleceń: wp pnscripts-tabcrest import-yikes --dry-run"
 
 #: src/Admin/SettingsPage.php:362
 msgid "Found:"
-msgstr ""
+msgstr "Znaleziono:"
 
 #. translators: %d: number of products
 #: src/Admin/SettingsPage.php:366
 #, php-format
 msgid "%d product with YIKES tabs"
 msgid_plural "%d products with YIKES tabs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d produkt z zakładkami YIKES"
+msgstr[1] "%d produkty z zakładkami YIKES"
+msgstr[2] "%d produktów z zakładkami YIKES"
 
 #: src/Admin/SettingsPage.php:370
 msgid "YIKES plugin active"
-msgstr ""
+msgstr "wtyczka YIKES aktywna"
 
 #: src/Admin/SettingsPage.php:370
 msgid "YIKES plugin not active (data can still be imported)"
-msgstr ""
+msgstr "wtyczka YIKES nieaktywna (dane nadal można zaimportować)"
 
 #. translators: %s: date and time
 #: src/Admin/SettingsPage.php:376
 #, php-format
 msgid "last import: %s"
-msgstr ""
+msgstr "ostatni import: %s"
 
 #: src/Admin/SettingsPage.php:383
 msgid "Dry run (change nothing)"
-msgstr ""
+msgstr "Próba (bez zmian)"
 
 #: src/Admin/SettingsPage.php:384
 msgid "Import now"
-msgstr ""
+msgstr "Importuj teraz"
 
 #: src/Admin/SettingsPage.php:385
 msgid "Undo import"
-msgstr ""
+msgstr "Cofnij import"
 
 #: src/Admin/SettingsPage.php:390
 msgid "Notes"
-msgstr ""
+msgstr "Uwagi"
 
 #: src/Admin/SettingsPage.php:417
-msgid "PN Scripts Tabwise found tabs from Custom Product Tabs for WooCommerce (YIKES). Import them in one click; YIKES data stays untouched."
-msgstr ""
+msgid "PN Scripts Tabcrest found tabs from Custom Product Tabs for WooCommerce (YIKES). Import them in one click; YIKES data stays untouched."
+msgstr "PN Scripts Tabcrest znalazł zakładki z Custom Product Tabs for WooCommerce (YIKES). Zaimportuj je jednym kliknięciem; dane YIKES pozostaną nietknięte."
 
 #: src/Admin/SettingsPage.php:419
 msgid "Review the import"
-msgstr ""
+msgstr "Sprawdź import"
 
 #: src/Admin/SettingsPage.php:421
 msgid "Dismiss"
-msgstr ""
+msgstr "Odrzuć"
 
 #. translators: %d: YIKES saved tab id
 #: src/Import/YikesMapper.php:82
 #, php-format
 msgid "Saved tab #%d has no title and was skipped."
-msgstr ""
+msgstr "Zapisana zakładka #%d nie ma tytułu i została pominięta."
 
 #. translators: 1: saved tab title, 2: taxonomy name
 #: src/Import/YikesMapper.php:98
 #, php-format
 msgid "Saved tab \"%1$s\" was assigned by the taxonomy \"%2$s\", which is not supported; it is imported for the categories and tags only."
-msgstr ""
+msgstr "Zapisana zakładka „%1$s” była przypisana według taksonomii „%2$s”, która nie jest obsługiwana; importowana jest tylko dla kategorii i tagów."
 
 #. translators: %d: product id
 #: src/Import/YikesMapper.php:194
 #, php-format
 msgid "Product #%d: a tab without a title (never shown by YIKES) was imported switched off."
-msgstr ""
+msgstr "Produkt #%d: zakładka bez tytułu (nigdy niepokazywana przez YIKES) została zaimportowana jako wyłączona."
 
 #. translators: 1: product id, 2: tab title
 #: src/Import/YikesMapper.php:198
 #, php-format
 msgid "Product #%1$d: the tab \"%2$s\" was hidden by a later tab with the same title in YIKES; it was imported switched off."
-msgstr ""
+msgstr "Produkt #%1$d: zakładka „%2$s” była ukryta przez późniejszą zakładkę o tym samym tytule w YIKES; zaimportowano ją jako wyłączoną."
 
 #. translators: %s: minimum WooCommerce version
 #: src/Plugin.php:202
 #, php-format
-msgid "PN Scripts Tabwise needs WooCommerce %s or newer to be active."
-msgstr ""
+msgid "PN Scripts Tabcrest needs WooCommerce %s or newer to be active."
+msgstr "PN Scripts Tabcrest wymaga aktywnego WooCommerce w wersji %s lub nowszej."
 
 #: src/Storage/GlobalTabs.php:68
 msgid "Global product tabs"
-msgstr ""
+msgstr "Globalne zakładki produktów"
 
 #: src/Storage/GlobalTabs.php:69
 msgid "Global product tab"
-msgstr ""
+msgstr "Globalna zakładka produktu"
 
 #: src/Storage/GlobalTabs.php:70
 #: src/Storage/GlobalTabs.php:71
 msgid "Product tabs"
-msgstr ""
+msgstr "Zakładki produktów"
 
 #: src/Storage/GlobalTabs.php:72
 #: src/Storage/GlobalTabs.php:73
 msgid "Add global tab"
-msgstr ""
+msgstr "Dodaj globalną zakładkę"
 
 #: src/Storage/GlobalTabs.php:75
 msgid "New global tab"
-msgstr ""
+msgstr "Nowa globalna zakładka"
 
 #: src/Storage/GlobalTabs.php:76
 msgid "Search global tabs"
-msgstr ""
+msgstr "Szukaj globalnych zakładek"
 
 #: src/Storage/GlobalTabs.php:77
 msgid "No global tabs yet."
-msgstr ""
+msgstr "Brak globalnych zakładek."
 
 #: src/Storage/GlobalTabs.php:78
 msgid "No global tabs in the trash."
-msgstr ""
+msgstr "Brak globalnych zakładek w koszu."
 
 #: src/Storage/GlobalTabs.php:79
 msgid "Global tab updated."
-msgstr ""
+msgstr "Globalna zakładka zaktualizowana."
 
 #: src/Storage/GlobalTabs.php:80
 msgid "Global tab published."
-msgstr ""
+msgstr "Globalna zakładka opublikowana."
 
 #: src/Storage/GlobalTabs.php:82
 msgid "Reusable tabs shown on all products, on products in chosen categories or tags, or where added manually."
-msgstr ""
+msgstr "Zakładki wielokrotnego użytku wyświetlane na wszystkich produktach, w wybranych kategoriach lub tagach albo tam, gdzie dodano je ręcznie."
 
 #: src/Storage/GlobalTabsRestController.php:47
 msgid "Sorry, you are not allowed to view global product tabs."
-msgstr ""
+msgstr "Nie masz uprawnień do przeglądania globalnych zakładek produktów."

@@ -2,42 +2,42 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: PN Scripts Tabwise 1.0.3\n"
-"Report-Msgid-Bugs-To: https://github.com/pnscripts/woocommerce-product-tabs/issues\n"
+"Project-Id-Version: PN Scripts Tabcrest 1.0.4\n"
+"Report-Msgid-Bugs-To: https://github.com/pnscripts/pnscripts-tabcrest/issues\n"
 "Last-Translator: PN Scripts <https://pnscripts.com>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-06T08:16:09+00:00\n"
+"POT-Creation-Date: 2026-10-10T09:39:11+00:00\n"
 "PO-Revision-Date: 2026-10-04 00:00+0000\n"
 "X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: pnscripts-tabwise\n"
+"X-Domain: pnscripts-tabcrest\n"
 "Language: de_DE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Plugin Name of the plugin
-#: pnscripts-tabwise.php
-msgid "PN Scripts Tabwise – Custom Product Tabs & FAQ"
-msgstr "PN Scripts Tabwise – Custom Product Tabs & FAQ"
+#: pnscripts-tabcrest.php
+msgid "PN Scripts Tabcrest – Custom Product Tabs & FAQ"
+msgstr "PN Scripts Tabcrest – Custom Product Tabs & FAQ"
 
 #. Plugin URI of the plugin
-#: pnscripts-tabwise.php
-msgid "https://pnscripts.com/marketplace/pn-product-tabs"
-msgstr "https://pnscripts.com/marketplace/pn-product-tabs"
+#: pnscripts-tabcrest.php
+msgid "https://pnscripts.com/marketplace/pnscripts-tabcrest"
+msgstr "https://pnscripts.com/marketplace/pnscripts-tabcrest"
 
 #. Description of the plugin
-#: pnscripts-tabwise.php
+#: pnscripts-tabcrest.php
 msgid "Custom product tabs per product, reusable global tabs by category or tag, FAQ tabs with optional FAQPage schema, rename, reorder or hide the default tabs, and a one-click importer from YIKES Custom Product Tabs. Works in classic and block themes."
 msgstr "Eigene Produkt-Tabs pro Produkt, wiederverwendbare globale Tabs nach Kategorie oder Schlagwort, FAQ-Tabs mit optionalem FAQPage-Schema, Umbenennen, Sortieren oder Ausblenden der Standard-Tabs und ein Ein-Klick-Import aus YIKES Custom Product Tabs. Funktioniert mit klassischen und Block-Themes."
 
 #. Author of the plugin
-#: pnscripts-tabwise.php
+#: pnscripts-tabcrest.php
 msgid "PN Scripts"
 msgstr "PN Scripts"
 
 #. Author URI of the plugin
-#: pnscripts-tabwise.php
+#: pnscripts-tabcrest.php
 msgid "https://pnscripts.com"
 msgstr "https://pnscripts.com"
 
@@ -459,8 +459,8 @@ msgid "Tabs YIKES never showed (no title, or hidden by another tab with the same
 msgstr "Tabs, die YIKES nie angezeigt hat (ohne Titel oder durch einen anderen Tab mit gleichem Titel verdeckt), werden deaktiviert importiert und unten aufgelistet."
 
 #: src/Admin/SettingsPage.php:359
-msgid "Large catalogues are handled in batches of 100 products. Command line: wp pnscripts-tabwise import-yikes --dry-run"
-msgstr "Große Kataloge werden in Paketen zu 100 Produkten verarbeitet. Kommandozeile: wp pnscripts-tabwise import-yikes --dry-run"
+msgid "Large catalogues are handled in batches of 100 products. Command line: wp pnscripts-tabcrest import-yikes --dry-run"
+msgstr "Große Kataloge werden in Paketen zu 100 Produkten verarbeitet. Kommandozeile: wp pnscripts-tabcrest import-yikes --dry-run"
 
 #: src/Admin/SettingsPage.php:362
 msgid "Found:"
@@ -505,8 +505,8 @@ msgid "Notes"
 msgstr "Hinweise"
 
 #: src/Admin/SettingsPage.php:417
-msgid "PN Scripts Tabwise found tabs from Custom Product Tabs for WooCommerce (YIKES). Import them in one click; YIKES data stays untouched."
-msgstr "PN Scripts Tabwise hat Tabs aus Custom Product Tabs for WooCommerce (YIKES) gefunden. Importieren Sie sie mit einem Klick; die YIKES-Daten bleiben unverändert."
+msgid "PN Scripts Tabcrest found tabs from Custom Product Tabs for WooCommerce (YIKES). Import them in one click; YIKES data stays untouched."
+msgstr "PN Scripts Tabcrest hat Tabs aus Custom Product Tabs for WooCommerce (YIKES) gefunden. Importieren Sie sie mit einem Klick; die YIKES-Daten bleiben unverändert."
 
 #: src/Admin/SettingsPage.php:419
 msgid "Review the import"
@@ -543,8 +543,8 @@ msgstr "Produkt #%1$d: Der Tab „%2$s“ wurde in YIKES durch einen späteren T
 #. translators: %s: minimum WooCommerce version
 #: src/Plugin.php:202
 #, php-format
-msgid "PN Scripts Tabwise needs WooCommerce %s or newer to be active."
-msgstr "PN Scripts Tabwise benötigt ein aktives WooCommerce %s oder neuer."
+msgid "PN Scripts Tabcrest needs WooCommerce %s or newer to be active."
+msgstr "PN Scripts Tabcrest benötigt ein aktives WooCommerce %s oder neuer."
 
 #: src/Storage/GlobalTabs.php:68
 msgid "Global product tabs"

@@ -1,14 +1,28 @@
 # Changelog
 
-All notable changes to PN Scripts Tabwise (formerly PN Scripts Product Tabs). Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow [SemVer](https://semver.org/).
+All notable changes to PN Scripts Tabcrest (formerly PN Scripts Product Tabs). Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow [SemVer](https://semver.org/).
 
 ## [Unreleased]
 
 Before the first WordPress.org submission (owner):
 
 - WordPress.org account with 2FA; set the real username in `readme.txt` → `Contributors`.
-- Submit the zip from `bin/build-zip.sh` and request the slug `pnscripts-tabwise` (WordPress.org derives `pn-scripts-tabwise-custom-product-tabs-faq` from the plugin name otherwise; the slug can only be changed before approval).
+- Submit the zip from `bin/build-zip.sh` and request the slug `pnscripts-tabcrest` (WordPress.org derives `pn-scripts-tabcrest-custom-product-tabs-faq` from the plugin name otherwise; the slug can only be changed before approval).
 - After approval: upload `assets/screenshots/*.png` (and a banner/icon) to the SVN `assets/` folder.
+
+## [1.0.4] - 2026-10-10
+
+### Changed
+
+- Renamed to "PN Scripts Tabcrest – Custom Product Tabs & FAQ" (was "PN Scripts Tabwise – Custom Product Tabs & FAQ" in 1.0.3, which was never tagged or published): "Tabwise" is also the name of existing browser tab-manager extensions, so it risked the same naming rejection on WordPress.org. Slug, folder, main file, text domain and bundled translations are now `pnscripts-tabcrest`; Plugin URI is https://pnscripts.com/marketplace/pnscripts-tabcrest; the GitHub repository moved to https://github.com/pnscripts/pnscripts-tabcrest (the old URL redirects) and the Composer package is `pnscripts/pnscripts-tabcrest`.
+- Settings page slug is `pnscripts-tabcrest` (Products → Tab settings); links to the 1.0.x `page=pnscripts-product-tabs` still redirect to it.
+- WP-CLI command is `wp pnscripts-tabcrest`; the 1.0.x `wp pnscripts-product-tabs` keeps working as an alias.
+- Screenshots regenerated with the new name and command.
+- Namespace, constants, hooks, option names, meta keys, the `pnscripts_ptab` post type, its REST base, CSS classes and asset handles are unchanged.
+
+### Upgrade note
+
+- The main file name changed. A site running 1.0.x from GitHub must activate the plugin again after replacing the `pnscripts-product-tabs` folder with `pnscripts-tabcrest`.
 
 ## [1.0.3] - 2026-10-06
 

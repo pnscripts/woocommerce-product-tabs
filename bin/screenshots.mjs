@@ -107,14 +107,14 @@ if ( want( 3 ) && globalTab ) {
 
 // 4. Tab settings (default tabs).
 if ( want( 4 ) ) {
-	await page.goto( `${ site }/wp-admin/edit.php?post_type=product&page=pnscripts-tabwise`, { waitUntil: 'networkidle2' } );
+	await page.goto( `${ site }/wp-admin/edit.php?post_type=product&page=pnscripts-tabcrest`, { waitUntil: 'networkidle2' } );
 	await shot( 4, '#wpbody-content .wrap', 8 );
 }
 
 // 5. Import from YIKES after a dry run.
 if ( want( 5 ) ) {
 	const run = async ( mode ) => {
-		await page.goto( `${ site }/wp-admin/edit.php?post_type=product&page=pnscripts-tabwise&tab=import`, { waitUntil: 'networkidle2' } );
+		await page.goto( `${ site }/wp-admin/edit.php?post_type=product&page=pnscripts-tabcrest&tab=import`, { waitUntil: 'networkidle2' } );
 		await page.evaluate( () => { window.confirm = () => true; } );
 		await page.click( `[data-pnscripts-pt-run="${ mode }"]` );
 		await page.waitForFunction( () => /finished|removed/i.test( document.querySelector( '[data-pnscripts-pt-status]' ).textContent ), { timeout: 180000 } );

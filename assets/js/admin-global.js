@@ -1,5 +1,5 @@
 /**
- * PN Scripts Tabwise: global tab settings box.
+ * PN Scripts Tabcrest: global tab settings box.
  *
  * @package Pnscripts\ProductTabs
  */

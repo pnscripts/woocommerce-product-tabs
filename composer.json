@@ -1,14 +1,20 @@
 {
-    "name": "pnscripts/woocommerce-product-tabs",
+    "name": "pnscripts/pnscripts-tabcrest",
     "description": "WooCommerce plugin: custom and global product tabs, FAQ tabs, default tab manager and a one-click importer from YIKES Custom Product Tabs.",
     "type": "wordpress-plugin",
     "license": "GPL-2.0-or-later",
+    "homepage": "https://pnscripts.com/marketplace/pnscripts-tabcrest",
     "authors": [
         {
             "name": "PN Scripts",
             "homepage": "https://pnscripts.com"
         }
     ],
+    "support": {
+        "issues": "https://github.com/pnscripts/pnscripts-tabcrest/issues",
+        "source": "https://github.com/pnscripts/pnscripts-tabcrest",
+        "security": "https://github.com/pnscripts/pnscripts-tabcrest/security/policy"
+    },
     "require": {
         "php": ">=8.1"
     },

@@ -46,7 +46,7 @@ final class GlobalTabMetaBox {
 	 * Register the box.
 	 */
 	public function add_box(): void {
-		add_meta_box( 'pnscripts-product-tabs-settings', __( 'Tab settings', 'pnscripts-tabwise' ), array( $this, 'render' ), GlobalTabs::POST_TYPE, 'normal', 'high' );
+		add_meta_box( 'pnscripts-product-tabs-settings', __( 'Tab settings', 'pnscripts-tabcrest' ), array( $this, 'render' ), GlobalTabs::POST_TYPE, 'normal', 'high' );
 	}
 
 	/**
@@ -84,9 +84,9 @@ final class GlobalTabMetaBox {
 		<div class="pnscripts-pt-global" data-pnscripts-pt-global>
 			<input type="hidden" name="<?php echo esc_attr( $name ); ?>[submitted]" value="1" />
 			<fieldset class="pnscripts-pt-global__row">
-				<legend><?php esc_html_e( 'Tab type', 'pnscripts-tabwise' ); ?></legend>
-				<label><input type="radio" name="<?php echo esc_attr( $name ); ?>[type]" value="content" <?php checked( TabSanitizer::TYPE_CONTENT, $tab['type'] ); ?> data-pnscripts-pt-type /> <?php esc_html_e( 'Rich text: the content written in the editor above', 'pnscripts-tabwise' ); ?></label><br />
-				<label><input type="radio" name="<?php echo esc_attr( $name ); ?>[type]" value="faq" <?php checked( TabSanitizer::TYPE_FAQ, $tab['type'] ); ?> data-pnscripts-pt-type /> <?php esc_html_e( 'FAQ: questions and answers below', 'pnscripts-tabwise' ); ?></label>
+				<legend><?php esc_html_e( 'Tab type', 'pnscripts-tabcrest' ); ?></legend>
+				<label><input type="radio" name="<?php echo esc_attr( $name ); ?>[type]" value="content" <?php checked( TabSanitizer::TYPE_CONTENT, $tab['type'] ); ?> data-pnscripts-pt-type /> <?php esc_html_e( 'Rich text: the content written in the editor above', 'pnscripts-tabcrest' ); ?></label><br />
+				<label><input type="radio" name="<?php echo esc_attr( $name ); ?>[type]" value="faq" <?php checked( TabSanitizer::TYPE_FAQ, $tab['type'] ); ?> data-pnscripts-pt-type /> <?php esc_html_e( 'FAQ: questions and answers below', 'pnscripts-tabcrest' ); ?></label>
 			</fieldset>
 
 			<div class="pnscripts-pt-global__faq" data-pnscripts-pt-show-for="faq">
@@ -104,11 +104,11 @@ final class GlobalTabMetaBox {
 					?>
 				</div>
 				<p>
-					<button type="button" class="button" data-pnscripts-pt-faq-add><?php esc_html_e( 'Add question', 'pnscripts-tabwise' ); ?></button>
+					<button type="button" class="button" data-pnscripts-pt-faq-add><?php esc_html_e( 'Add question', 'pnscripts-tabcrest' ); ?></button>
 					<label>
 						<input type="hidden" name="<?php echo esc_attr( $name ); ?>[schema]" value="0" />
 						<input type="checkbox" name="<?php echo esc_attr( $name ); ?>[schema]" value="1" <?php checked( $tab['schema'] ); ?> />
-						<?php esc_html_e( 'Publish as FAQPage structured data', 'pnscripts-tabwise' ); ?>
+						<?php esc_html_e( 'Publish as FAQPage structured data', 'pnscripts-tabcrest' ); ?>
 					</label>
 				</p>
 				<template id="pnscripts-pt-template-global-faq">
@@ -125,31 +125,31 @@ final class GlobalTabMetaBox {
 			</div>
 
 			<fieldset class="pnscripts-pt-global__row">
-				<legend><?php esc_html_e( 'Show this tab on', 'pnscripts-tabwise' ); ?></legend>
-				<label><input type="radio" name="<?php echo esc_attr( $name ); ?>[scope]" value="all" <?php checked( TabSanitizer::SCOPE_ALL, $tab['scope'] ); ?> data-pnscripts-pt-scope /> <?php esc_html_e( 'All products', 'pnscripts-tabwise' ); ?></label><br />
-				<label><input type="radio" name="<?php echo esc_attr( $name ); ?>[scope]" value="terms" <?php checked( TabSanitizer::SCOPE_TERMS, $tab['scope'] ); ?> data-pnscripts-pt-scope /> <?php esc_html_e( 'Products in these categories or with these tags', 'pnscripts-tabwise' ); ?></label><br />
-				<label><input type="radio" name="<?php echo esc_attr( $name ); ?>[scope]" value="manual" <?php checked( TabSanitizer::SCOPE_MANUAL, $tab['scope'] ); ?> data-pnscripts-pt-scope /> <?php esc_html_e( 'Only products where I add it (Product data → Custom tabs)', 'pnscripts-tabwise' ); ?></label>
+				<legend><?php esc_html_e( 'Show this tab on', 'pnscripts-tabcrest' ); ?></legend>
+				<label><input type="radio" name="<?php echo esc_attr( $name ); ?>[scope]" value="all" <?php checked( TabSanitizer::SCOPE_ALL, $tab['scope'] ); ?> data-pnscripts-pt-scope /> <?php esc_html_e( 'All products', 'pnscripts-tabcrest' ); ?></label><br />
+				<label><input type="radio" name="<?php echo esc_attr( $name ); ?>[scope]" value="terms" <?php checked( TabSanitizer::SCOPE_TERMS, $tab['scope'] ); ?> data-pnscripts-pt-scope /> <?php esc_html_e( 'Products in these categories or with these tags', 'pnscripts-tabcrest' ); ?></label><br />
+				<label><input type="radio" name="<?php echo esc_attr( $name ); ?>[scope]" value="manual" <?php checked( TabSanitizer::SCOPE_MANUAL, $tab['scope'] ); ?> data-pnscripts-pt-scope /> <?php esc_html_e( 'Only products where I add it (Product data → Custom tabs)', 'pnscripts-tabcrest' ); ?></label>
 			</fieldset>
 
 			<div class="pnscripts-pt-global__terms" data-pnscripts-pt-show-for-scope="terms">
 				<p>
-					<label for="pnscripts-pt-cats"><strong><?php esc_html_e( 'Categories (subcategories included)', 'pnscripts-tabwise' ); ?></strong></label><br />
-					<select id="pnscripts-pt-cats" class="wc-enhanced-select" multiple="multiple" style="width:100%" name="<?php echo esc_attr( $name ); ?>[categories][]" data-placeholder="<?php esc_attr_e( 'Choose categories…', 'pnscripts-tabwise' ); ?>">
+					<label for="pnscripts-pt-cats"><strong><?php esc_html_e( 'Categories (subcategories included)', 'pnscripts-tabcrest' ); ?></strong></label><br />
+					<select id="pnscripts-pt-cats" class="wc-enhanced-select" multiple="multiple" style="width:100%" name="<?php echo esc_attr( $name ); ?>[categories][]" data-placeholder="<?php esc_attr_e( 'Choose categories…', 'pnscripts-tabcrest' ); ?>">
 						<?php self::term_options( 'product_cat', $tab['categories'] ); ?>
 					</select>
 				</p>
 				<p>
-					<label for="pnscripts-pt-tags"><strong><?php esc_html_e( 'Tags', 'pnscripts-tabwise' ); ?></strong></label><br />
-					<select id="pnscripts-pt-tags" class="wc-enhanced-select" multiple="multiple" style="width:100%" name="<?php echo esc_attr( $name ); ?>[tags][]" data-placeholder="<?php esc_attr_e( 'Choose tags…', 'pnscripts-tabwise' ); ?>">
+					<label for="pnscripts-pt-tags"><strong><?php esc_html_e( 'Tags', 'pnscripts-tabcrest' ); ?></strong></label><br />
+					<select id="pnscripts-pt-tags" class="wc-enhanced-select" multiple="multiple" style="width:100%" name="<?php echo esc_attr( $name ); ?>[tags][]" data-placeholder="<?php esc_attr_e( 'Choose tags…', 'pnscripts-tabcrest' ); ?>">
 						<?php self::term_options( 'product_tag', $tab['tags'] ); ?>
 					</select>
 				</p>
 			</div>
 
 			<p class="pnscripts-pt-global__row">
-				<label for="pnscripts-pt-priority"><strong><?php esc_html_e( 'Position (priority)', 'pnscripts-tabwise' ); ?></strong></label><br />
+				<label for="pnscripts-pt-priority"><strong><?php esc_html_e( 'Position (priority)', 'pnscripts-tabcrest' ); ?></strong></label><br />
 				<input type="number" id="pnscripts-pt-priority" min="0" max="999" step="1" name="<?php echo esc_attr( $name ); ?>[priority]" value="<?php echo esc_attr( (string) $tab['priority'] ); ?>" class="small-text" />
-				<span class="description"><?php esc_html_e( 'Lower numbers come first. WooCommerce uses 10 for Description, 20 for Additional information and 30 for Reviews (change these under Products → Tab settings).', 'pnscripts-tabwise' ); ?></span>
+				<span class="description"><?php esc_html_e( 'Lower numbers come first. WooCommerce uses 10 for Description, 20 for Additional information and 30 for Reviews (change these under Products → Tab settings).', 'pnscripts-tabcrest' ); ?></span>
 			</p>
 			<?php
 			/**
@@ -216,13 +216,13 @@ final class GlobalTabMetaBox {
 		?>
 		<div class="pnscripts-pt__faq-item" data-pnscripts-pt-faq-item>
 			<p>
-				<label><strong><?php esc_html_e( 'Question', 'pnscripts-tabwise' ); ?></strong><br />
+				<label><strong><?php esc_html_e( 'Question', 'pnscripts-tabcrest' ); ?></strong><br />
 				<input type="text" class="widefat" name="<?php echo esc_attr( $name ); ?>[q]" value="<?php echo esc_attr( $item['q'] ); ?>" /></label>
 			</p>
 			<p>
-				<label><strong><?php esc_html_e( 'Answer', 'pnscripts-tabwise' ); ?></strong><br />
+				<label><strong><?php esc_html_e( 'Answer', 'pnscripts-tabcrest' ); ?></strong><br />
 				<textarea class="widefat" rows="3" name="<?php echo esc_attr( $name ); ?>[a]"><?php echo esc_textarea( $item['a'] ); ?></textarea></label>
-				<button type="button" class="button-link button-link-delete" data-pnscripts-pt-faq-remove><?php esc_html_e( 'Remove question', 'pnscripts-tabwise' ); ?></button>
+				<button type="button" class="button-link button-link-delete" data-pnscripts-pt-faq-remove><?php esc_html_e( 'Remove question', 'pnscripts-tabcrest' ); ?></button>
 			</p>
 		</div>
 		<?php
@@ -283,9 +283,9 @@ final class GlobalTabMetaBox {
 		foreach ( $columns as $key => $label ) {
 			$out[ (string) $key ] = is_string( $label ) ? $label : '';
 			if ( 'title' === $key ) {
-				$out['pnscripts_pt_scope']    = __( 'Shown on', 'pnscripts-tabwise' );
-				$out['pnscripts_pt_type']     = __( 'Type', 'pnscripts-tabwise' );
-				$out['pnscripts_pt_priority'] = __( 'Priority', 'pnscripts-tabwise' );
+				$out['pnscripts_pt_scope']    = __( 'Shown on', 'pnscripts-tabcrest' );
+				$out['pnscripts_pt_type']     = __( 'Type', 'pnscripts-tabcrest' );
+				$out['pnscripts_pt_priority'] = __( 'Priority', 'pnscripts-tabcrest' );
 			}
 		}
 		return $out;
@@ -307,7 +307,7 @@ final class GlobalTabMetaBox {
 				echo esc_html( self::scope_label( $tab ) );
 				break;
 			case 'pnscripts_pt_type':
-				echo esc_html( TabSanitizer::TYPE_FAQ === $tab['type'] ? __( 'FAQ', 'pnscripts-tabwise' ) : __( 'Rich text', 'pnscripts-tabwise' ) );
+				echo esc_html( TabSanitizer::TYPE_FAQ === $tab['type'] ? __( 'FAQ', 'pnscripts-tabcrest' ) : __( 'Rich text', 'pnscripts-tabcrest' ) );
 				break;
 			case 'pnscripts_pt_priority':
 				echo esc_html( (string) $tab['priority'] );
@@ -322,10 +322,10 @@ final class GlobalTabMetaBox {
 	 */
 	public static function scope_label( array $tab ): string {
 		if ( TabSanitizer::SCOPE_ALL === $tab['scope'] ) {
-			return __( 'All products', 'pnscripts-tabwise' );
+			return __( 'All products', 'pnscripts-tabcrest' );
 		}
 		if ( TabSanitizer::SCOPE_MANUAL === $tab['scope'] ) {
-			return __( 'Products where added', 'pnscripts-tabwise' );
+			return __( 'Products where added', 'pnscripts-tabcrest' );
 		}
 		$names = array();
 		foreach ( array_merge( $tab['categories'], $tab['tags'] ) as $term_id ) {
@@ -334,6 +334,6 @@ final class GlobalTabMetaBox {
 				$names[] = $term->name;
 			}
 		}
-		return array() === $names ? __( 'No categories or tags chosen', 'pnscripts-tabwise' ) : implode( ', ', $names );
+		return array() === $names ? __( 'No categories or tags chosen', 'pnscripts-tabcrest' ) : implode( ', ', $names );
 	}
 }

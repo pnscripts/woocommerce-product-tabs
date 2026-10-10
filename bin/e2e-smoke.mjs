@@ -127,12 +127,12 @@ await step( 'storefront shows the tabs in order with FAQ schema, no Reviews', as
 } );
 
 await step( 'settings page saves (rename Description)', async () => {
-	await page.goto( `${ site }/wp-admin/edit.php?post_type=product&page=pnscripts-tabwise`, { waitUntil: 'networkidle2' } );
+	await page.goto( `${ site }/wp-admin/edit.php?post_type=product&page=pnscripts-tabcrest`, { waitUntil: 'networkidle2' } );
 	await page.$eval( 'input[name="pnscripts_product_tabs_settings[defaults][description][title]"]', ( el ) => { el.value = 'Overview'; } );
 	await Promise.all( [ page.waitForNavigation( { waitUntil: 'networkidle2' } ), page.click( '#submit' ) ] );
 	const html = await ( await fetch( `${ site }/?p=${ productId }` ) ).text();
 	assert.match( html, />\s*Overview\s*</ );
-	await page.goto( `${ site }/wp-admin/edit.php?post_type=product&page=pnscripts-tabwise`, { waitUntil: 'networkidle2' } );
+	await page.goto( `${ site }/wp-admin/edit.php?post_type=product&page=pnscripts-tabcrest`, { waitUntil: 'networkidle2' } );
 	await page.$eval( 'input[name="pnscripts_product_tabs_settings[defaults][description][title]"]', ( el ) => { el.value = ''; } );
 	await Promise.all( [ page.waitForNavigation( { waitUntil: 'networkidle2' } ), page.click( '#submit' ) ] );
 } );

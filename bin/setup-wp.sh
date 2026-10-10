@@ -15,7 +15,7 @@ WC_VERSION="${WC_VERSION:-latest-stable}"
 WP_PORT="${WP_PORT:-8795}"
 CACHE="$ROOT/.cache"
 WP_CLI="$CACHE/wp-cli.phar"
-SLUG="pnscripts-tabwise"
+SLUG="pnscripts-tabcrest"
 
 mkdir -p "$CACHE"
 if [ ! -f "$WP_CLI" ]; then
@@ -76,7 +76,7 @@ require_once ABSPATH . 'wp-settings.php';
 PHP
 
 # Local test credentials only; the site listens on 127.0.0.1.
-wp core install --url="http://127.0.0.1:$WP_PORT" --title="PN Scripts Tabwise dev" \
+wp core install --url="http://127.0.0.1:$WP_PORT" --title="PN Scripts Tabcrest dev" \
 	--admin_user=admin --admin_password=admin --admin_email=admin@example.test --skip-email --quiet
 # WP-CLI derives a /wp sub-path from the folder name; pin both URLs to the server root.
 wp option update siteurl "http://127.0.0.1:$WP_PORT" --quiet

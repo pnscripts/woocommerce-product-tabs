@@ -150,7 +150,7 @@ final class Plugin {
 
 		if ( defined( 'WP_CLI' ) && WP_CLI && class_exists( '\WP_CLI' ) ) {
 			$command = new Command( $this );
-			\WP_CLI::add_command( 'pnscripts-tabwise', $command );
+			\WP_CLI::add_command( 'pnscripts-tabcrest', $command );
 			// 1.0.x name, kept so existing scripts keep working.
 			\WP_CLI::add_command( 'pnscripts-product-tabs', $command );
 		}
@@ -162,13 +162,13 @@ final class Plugin {
 	 */
 	public function load_textdomain(): void {
 		$locale   = determine_locale();
-		$official = WP_LANG_DIR . '/plugins/pnscripts-tabwise-' . $locale;
+		$official = WP_LANG_DIR . '/plugins/pnscripts-tabcrest-' . $locale;
 		if ( is_readable( $official . '.mo' ) || is_readable( $official . '.l10n.php' ) ) {
 			return;
 		}
-		$bundled = PNSCRIPTS_PRODUCT_TABS_DIR . 'languages/pnscripts-tabwise-' . $locale . '.mo';
+		$bundled = PNSCRIPTS_PRODUCT_TABS_DIR . 'languages/pnscripts-tabcrest-' . $locale . '.mo';
 		if ( is_readable( $bundled ) ) {
-			load_textdomain( 'pnscripts-tabwise', $bundled, $locale );
+			load_textdomain( 'pnscripts-tabcrest', $bundled, $locale );
 		}
 	}
 
@@ -199,7 +199,7 @@ final class Plugin {
 			esc_html(
 				sprintf(
 					/* translators: %s: minimum WooCommerce version */
-					__( 'PN Scripts Tabwise needs WooCommerce %s or newer to be active.', 'pnscripts-tabwise' ),
+					__( 'PN Scripts Tabcrest needs WooCommerce %s or newer to be active.', 'pnscripts-tabcrest' ),
 					PNSCRIPTS_PRODUCT_TABS_MIN_WC
 				)
 			)
